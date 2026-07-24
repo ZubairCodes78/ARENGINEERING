@@ -88,6 +88,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-scroll-behavior="smooth" className={`${inter.variable} ${manrope.variable}`}>
+      <head>
+        <meta
+          name="google-site-verification"
+          content="gPUBNBIwMzKPEkHyrnX_aWhaSTUKJYjdi8spc8VXqJc"
+        />
+      </head>
       <body className="min-h-screen bg-white font-sans antialiased">
         <script
           type="application/ld+json"
