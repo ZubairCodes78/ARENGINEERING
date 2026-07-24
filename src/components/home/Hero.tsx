@@ -54,12 +54,20 @@ export default function Hero() {
               Industrial Use.
             </p>
 
-            <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <Button href="/machines" variant="primary">
+            <div className="mt-10 flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-4 px-5 sm:px-0">
+              <Button 
+                href="/machines" 
+                variant="primary"
+                className="w-full sm:w-auto max-w-[340px] h-[56px] rounded-[16px] text-base font-semibold sm:rounded-md sm:px-5 sm:py-2.5 sm:text-sm"
+              >
                 Explore Machines
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button href="/contact" variant="outline-light">
+              <Button 
+                href="/contact" 
+                variant="outline-light"
+                className="w-full sm:w-auto max-w-[340px] h-[56px] rounded-[16px] text-base font-semibold sm:rounded-md sm:px-5 sm:py-2.5 sm:text-sm"
+              >
                 Request Quote
               </Button>
             </div>
