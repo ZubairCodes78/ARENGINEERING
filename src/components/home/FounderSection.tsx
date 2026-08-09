@@ -14,7 +14,7 @@ export default function FounderSection() {
           <FadeUp>
             <div className="relative aspect-[4/5] max-w-md overflow-hidden rounded-lg border border-border bg-light-gray">
               <Image
-                src="/images/Founder.jpeg"
+                src="/images/Founder.png"
                 alt={FOUNDER.name}
                 fill
                 className="object-cover"

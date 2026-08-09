@@ -20,7 +20,7 @@ export default function FounderPremium({ preview = false }: FounderPremiumProps)
             <div className="relative mx-auto max-w-md lg:mx-0">
               <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-border bg-light-gray shadow-sm">
                 <Image
-                  src="/images/Founder.jpeg"
+                  src="/images/Founder.png"
                   alt={FOUNDER.name}
                   fill
                   className="object-cover"
