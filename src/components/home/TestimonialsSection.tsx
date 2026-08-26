@@ -59,7 +59,7 @@ export default function TestimonialsSection() {
               <article className="h-full rounded-2xl border border-border bg-light-gray p-8">
                 <div className="flex items-center justify-between gap-4">
                   <div className="relative h-12 w-28">
-                    <Image src={item.logo} alt={`${item.company} logo`} fill sizes="112px" className="object-contain object-left grayscale" />
+                    <Image src={item.logo} alt={`${item.company} logo`} fill sizes="112px" loading="lazy" className="object-contain object-left grayscale" />
                   </div>
                   <p className="text-xs font-semibold text-dark-gray/55">{item.date}</p>
                 </div>

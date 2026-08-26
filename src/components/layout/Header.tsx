@@ -56,8 +56,7 @@ export default function Header() {
     >
       <div className="mx-auto flex h-[70px] max-w-7xl items-center justify-between px-5 lg:px-8">
         <Link href="/" className="flex min-w-0 items-center gap-2.5" aria-label="AL Raheem Engineering home">
-          <OfficialLogo theme={transparent ? "dark" : "light"} height={52} priority className="hidden sm:block" />
-          <OfficialLogo theme={transparent ? "dark" : "light"} height={42} priority className="sm:hidden" />
+          <OfficialLogo theme={transparent ? "dark" : "light"} priority />
         </Link>
 
         <nav className="hidden items-center gap-8 xl:flex" aria-label="Primary navigation">

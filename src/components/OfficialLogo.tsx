@@ -10,23 +10,27 @@ interface OfficialLogoProps {
 
 export default function OfficialLogo({
   theme = "light",
-  height = 52,
+  height,
   priority = false,
   className,
 }: OfficialLogoProps) {
-  const width = Math.round(height * 3.2);
+  const width = height ? Math.round(height * 3.2) : undefined;
 
   return (
     <span
-      className={cn("relative inline-block shrink-0", className)}
-      style={{ width, height }}
+      className={cn(
+        "relative inline-block shrink-0",
+        height ? "" : "h-[42px] w-[134px] sm:h-[52px] sm:w-[166px]",
+        className
+      )}
+      style={height && width ? { width, height } : undefined}
     >
       <Image
         src={theme === "dark" ? "/images/logo-white.png" : "/images/logo.png"}
         alt="AL RAHEEM ENGINEERING Logo"
         fill
         priority={priority}
-        sizes={`${width}px`}
+        sizes={height && width ? `${width}px` : "(min-width: 640px) 166px, 134px"}
         className="object-contain"
       />
     </span>

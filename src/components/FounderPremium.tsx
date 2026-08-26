@@ -23,8 +23,9 @@ export default function FounderPremium({ preview = false }: FounderPremiumProps)
                   src="/images/Founder.png"
                   alt="Abdul Sattar - Founder & Chief Packaging Machine Engineer AL Raheem Engineering Lahore"
                   fill
+                  loading="lazy"
+                  sizes="(min-width: 1024px) 448px, (min-width: 640px) 448px, 100vw"
                   className="object-cover"
-                  priority
                 />
               </div>
             </div>

@@ -72,19 +72,19 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/images/logo.png",
+        url: "/icon.png",
         type: "image/png",
       },
     ],
     shortcut: [
       {
-        url: "/images/logo.png",
+        url: "/icon.png",
         type: "image/png",
       },
     ],
     apple: [
       {
-        url: "/images/logo.png",
+        url: "/icon.png",
         type: "image/png",
       },
     ],

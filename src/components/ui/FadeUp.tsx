@@ -14,7 +14,7 @@ export default function FadeUp({ children, className, delay = 0 }: FadeUpProps) 
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
+      viewport={{ once: true, margin: "0px" }}
       transition={{ duration: 0.5, delay, ease: "easeOut" }}
       className={cn(className)}
     >

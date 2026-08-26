@@ -27,6 +27,8 @@ export default function TrustedClients() {
                   alt={`${client.name} - Industrial Packaging Machinery Client of AL Raheem Engineering`}
                   width={360}
                   height={144}
+                  loading="lazy"
+                  sizes="(min-width: 640px) 240px, 180px"
                   className="h-auto max-h-[72px] w-auto object-contain grayscale transition duration-300 group-hover:scale-[1.04] group-hover:grayscale-0"
                 />
               </div>

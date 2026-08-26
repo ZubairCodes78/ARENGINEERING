@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import Button from "@/components/ui/Button";
@@ -8,32 +9,73 @@ import FadeUp from "@/components/ui/FadeUp";
 import { COMPANY } from "@/lib/constants";
 
 const slides = [
-  "/images/hero-flow-wrap.png",
-  "/images/hero-candy-packing.png",
-  "/images/hero-pouch-line.png",
+  {
+    src: "/images/hero-flow-wrap.png",
+    alt: "AL Raheem Engineering - Flow Wrap Packaging Machine",
+  },
+  {
+    src: "/images/hero-candy-packing.png",
+    alt: "AL Raheem Engineering - High Speed Candy Packing Machine",
+  },
+  {
+    src: "/images/hero-pouch-line.png",
+    alt: "AL Raheem Engineering - Pouch Packaging Production Line",
+  },
 ];
 
 export default function Hero() {
   const [active, setActive] = useState(0);
+  const [loadedIndices, setLoadedIndices] = useState<number[]>([0]);
 
   useEffect(() => {
     const timer = window.setInterval(() => {
-      setActive((value) => (value + 1) % slides.length);
+      setActive((prev) => {
+        const next = (prev + 1) % slides.length;
+        setLoadedIndices((current) =>
+          current.includes(next) ? current : [...current, next]
+        );
+        return next;
+      });
     }, 5000);
 
     return () => window.clearInterval(timer);
   }, []);
 
+  const handleSlideSelect = (index: number) => {
+    setLoadedIndices((current) =>
+      current.includes(index) ? current : [...current, index]
+    );
+    setActive(index);
+  };
+
   return (
     <section className="relative min-h-[90vh] overflow-hidden bg-primary">
-      {slides.map((slide, index) => (
-        <div
-          key={slide}
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
-          style={{ backgroundImage: `url('${slide}')`, opacity: active === index ? 1 : 0 }}
-          aria-hidden
-        />
-      ))}
+      {slides.map((slide, index) => {
+        // Strictly only render slide 0 on initial load; render subsequent slides only when needed
+        if (!loadedIndices.includes(index)) {
+          return null;
+        }
+
+        return (
+          <div
+            key={slide.src}
+            className="absolute inset-0 transition-opacity duration-1000"
+            style={{ opacity: active === index ? 1 : 0 }}
+            aria-hidden={active !== index}
+          >
+            <Image
+              src={slide.src}
+              alt={slide.alt}
+              fill
+              priority={index === 0}
+              loading={index === 0 ? "eager" : "lazy"}
+              sizes="100vw"
+              quality={85}
+              className="object-cover object-center"
+            />
+          </div>
+        );
+      })}
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,18,31,0.42)_0%,rgba(4,18,31,0.76)_58%,rgba(4,18,31,0.86)_100%)]" />
       <div className="absolute inset-0 bg-primary/24" />
 
@@ -78,10 +120,10 @@ export default function Hero() {
       <div className="absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 gap-3">
         {slides.map((slide, index) => (
           <button
-            key={slide}
+            key={slide.src}
             type="button"
             className={`h-1.5 rounded-full transition-all ${active === index ? "w-10 bg-white" : "w-2.5 bg-white/45"}`}
-            onClick={() => setActive(index)}
+            onClick={() => handleSlideSelect(index)}
             aria-label={`Show hero slide ${index + 1}`}
           />
         ))}
