@@ -1,33 +1,109 @@
-'use client'
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { ArrowLeft, Calendar } from "lucide-react";
+import Container from "@/components/ui/Container";
+import FadeUp from "@/components/ui/FadeUp";
+import Button from "@/components/ui/Button";
+import EventGalleryClient from "@/components/gallery/EventGalleryClient";
+import { COMPANY, EVENTS } from "@/lib/constants";
 
-import { useState, use } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { ArrowLeft, Calendar } from 'lucide-react'
-import Container from '@/components/ui/Container'
-import FadeUp from '@/components/ui/FadeUp'
-import Button from '@/components/ui/Button'
-import ImageViewer from '@/components/gallery/ImageViewer'
-import { EVENTS } from '@/lib/constants'
+interface EventPageProps {
+  params: Promise<{ slug: string }>;
+}
 
-export default function EventPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = use(params)
-  const event = EVENTS.find((e) => e.slug === slug)
+export function generateStaticParams() {
+  return EVENTS.map((event) => ({ slug: event.slug }));
+}
+
+export async function generateMetadata({ params }: EventPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const event = EVENTS.find((e) => e.slug === slug);
 
   if (!event) {
-    return null
+    return { title: "Event Not Found | AL RAHEEM ENGINEERING" };
+  }
+
+  const canonical = `/galleryhb/${event.slug}`;
+  const title = `${event.title} | Life at AL RAHEEM ENGINEERING`;
+  const description = event.description;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${COMPANY.websiteUrl}${canonical}`,
+      type: "article",
+      siteName: COMPANY.name,
+      locale: "en_PK",
+      images: [
+        {
+          url: event.coverImage,
+          width: 1200,
+          height: 630,
+          alt: event.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [event.coverImage],
+    },
+  };
+}
+
+export default async function EventPage({ params }: EventPageProps) {
+  const { slug } = await params;
+  const event = EVENTS.find((e) => e.slug === slug);
+
+  if (!event) {
+    notFound();
   }
 
   const images = [
     `/images/events/${event.folder}/1.png`,
     `/images/events/${event.folder}/2.jpeg`,
-  ]
+  ];
 
-  const [viewerOpen, setViewerOpen] = useState(false)
-  const [initialIndex, setInitialIndex] = useState(0)
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: event.title,
+    description: event.description,
+    image: `${COMPANY.websiteUrl}${event.coverImage}`,
+    startDate: "2026-01-15",
+    location: {
+      "@type": "Place",
+      name: "Lahore, Pakistan",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Lahore",
+        addressCountry: "PK",
+      },
+    },
+    organizer: {
+      "@type": "Organization",
+      name: COMPANY.name,
+      url: COMPANY.websiteUrl,
+    },
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
       {/* Back Button */}
       <section className="bg-white pt-8 pb-4">
         <Container>
@@ -47,7 +123,7 @@ export default function EventPage({ params }: { params: Promise<{ slug: string }
             <div className="relative w-full h-auto overflow-hidden rounded-xl border border-border bg-light-gray mb-8">
               <Image
                 src={event.coverImage}
-                alt={event.title}
+                alt={`${event.title} - AL Raheem Engineering Company Event Lahore`}
                 width={1920}
                 height={1080}
                 className="object-contain w-full h-auto"
@@ -77,41 +153,9 @@ export default function EventPage({ params }: { params: Promise<{ slug: string }
               Photo Gallery
             </h2>
           </FadeUp>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {images.map((img, index) => (
-              <FadeUp key={index} delay={index * 0.1}>
-                <div 
-                  className="relative w-full h-[300px] md:h-[400px] overflow-hidden rounded-xl border border-border bg-light-gray group cursor-pointer"
-                  onClick={() => {
-                    setInitialIndex(index)
-                    setViewerOpen(true)
-                  }}
-                >
-                  <Image
-                    src={img}
-                    alt={`${event.title} - Photo ${index + 1}`}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <span className="text-white font-medium">View</span>
-                  </div>
-                </div>
-              </FadeUp>
-            ))}
-          </div>
+          <EventGalleryClient images={images} eventTitle={event.title} />
         </Container>
       </section>
-
-      {/* Image Viewer Modal */}
-      {viewerOpen && (
-        <ImageViewer
-          images={images}
-          initialIndex={initialIndex}
-          onClose={() => setViewerOpen(false)}
-        />
-      )}
     </>
-  )
+  );
 }

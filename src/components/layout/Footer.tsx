@@ -6,18 +6,34 @@ import SocialIcon from "@/components/SocialIcon";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { COMPANY, LEGAL_LINKS, SOCIAL_LINKS, whatsAppUrl } from "@/lib/constants";
 
+const machineLinks = [
+  { label: "Candy Packing Machine (AR-800)", href: "/machines/candy-packing-machine" },
+  { label: "Toffee Wrapping Machine (AR-Toffee)", href: "/machines/toffee-wrapping-machine" },
+  { label: "Horizontal Flow Wrapper (AR-210)", href: "/machines/horizontal-flow-wrap-machine" },
+  { label: "Zombie Packing Machine (AR-Zombie)", href: "/machines/zombie-packing-machine" },
+  { label: "Biscuit & Rusk Packing Machine (AR-300)", href: "/machines/biscuit-rusk-packing-machine" },
+  { label: "Noodle Packing Machine (AR-Noodle)", href: "/machines/noodle-packing-machine" },
+  { label: "View Complete Machine Catalogue →", href: "/machines" },
+];
+
 const companyLinks = [
-  { label: "About", href: "/about" },
-  { label: "Machines", href: "/machines" },
-  { label: "Industries", href: "/industries" },
-  { label: "Contact", href: "/contact" },
+  { label: "About Us", href: "/about" },
+  { label: "Founder Profile", href: "/founder" },
+  { label: "Manufacturing Process", href: "/manufacturing" },
+  { label: "Industries Served", href: "/industries" },
+  { label: "Client Testimonials", href: "/testimonials" },
+  { label: "Packaging Machine FAQs", href: "/faqs" },
+  { label: "Articles & Buying Guides", href: "/blog" },
+  { label: "Life at AR Engineering", href: "/galleryhb" },
+  { label: "Official Social Media", href: "/social" },
 ];
 
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-primary text-white">
       <Container className="py-20">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.2fr_0.75fr_0.9fr_1.1fr]">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.3fr_1.1fr_0.9fr_1fr]">
+          {/* Column 1: Company Info */}
           <div>
             <div className="flex items-center gap-3">
               <OfficialLogo
@@ -27,19 +43,48 @@ export default function Footer() {
               />
             </div>
             <p className="mt-6 max-w-sm text-sm leading-7 text-white/62">
-              Industrial packaging machine manufacturer serving food, confectionery, bakery,
-              snacks, soap, cosmetics, and pharmaceutical production.
+              Industrial packaging machine manufacturer in Lahore, Pakistan. Engineering reliable
+              systems for food, confectionery, bakery, snacks, soap, cosmetics, and pharmaceutical
+              production lines.
             </p>
+            <div className="mt-6 space-y-2 text-xs text-white/50">
+              <p>📍 {COMPANY.address.full}</p>
+              <p>📞 Phone: {COMPANY.phone}</p>
+              <p>✉️ Email: {COMPANY.email}</p>
+            </div>
           </div>
 
+          {/* Column 2: Packaging Machines */}
           <div>
-            <h3 className="mb-5 font-heading text-sm font-semibold text-white">
-              Company
+            <h3 className="mb-5 font-heading text-sm font-semibold tracking-wide text-white">
+              Packaging Machinery
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2.5">
+              {machineLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-xs text-white/70 transition-colors hover:text-secondary"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3: Company & Resources */}
+          <div>
+            <h3 className="mb-5 font-heading text-sm font-semibold tracking-wide text-white">
+              Company & Resources
+            </h3>
+            <ul className="space-y-2.5">
               {companyLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-white/70 transition-colors hover:text-white">
+                  <Link
+                    href={link.href}
+                    className="text-xs text-white/70 transition-colors hover:text-secondary"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -47,55 +92,55 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Column 4: Contact & Legal */}
           <div>
-            <h3 className="mb-5 font-heading text-sm font-semibold text-white">
-              Policies
+            <h3 className="mb-5 font-heading text-sm font-semibold tracking-wide text-white">
+              Contact & Policies
             </h3>
             <ul className="space-y-3">
-              {LEGAL_LINKS.filter((link) => link.href !== "/refund-policy").map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-white/70 transition-colors hover:text-white">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-5 font-heading text-sm font-semibold text-white">
-              Contact
-            </h3>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3 text-sm text-white/70">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-secondary" />
-                <span>{COMPANY.address.full}</span>
-              </li>
-              <li className="flex items-center gap-3 text-sm text-white/70">
-                <Phone className="h-4 w-4 shrink-0 text-secondary" />
+              <li className="flex items-center gap-3 text-xs text-white/70">
+                <Phone className="h-3.5 w-3.5 shrink-0 text-secondary" />
                 <a href={`tel:${COMPANY.phoneRaw}`} className="hover:text-white">
                   {COMPANY.phone}
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-sm text-white/70">
-                <Mail className="h-4 w-4 shrink-0 text-secondary" />
+              <li className="flex items-center gap-3 text-xs text-white/70">
+                <Mail className="h-3.5 w-3.5 shrink-0 text-secondary" />
                 <a href={`mailto:${COMPANY.email}`} className="hover:text-white">
                   {COMPANY.email}
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-sm text-white/70">
-                <WhatsAppIcon className="h-4 w-4 shrink-0 text-secondary" />
+              <li className="flex items-center gap-3 text-xs text-white/70">
+                <WhatsAppIcon className="h-3.5 w-3.5 shrink-0 text-secondary" />
                 <a
-                  href={whatsAppUrl("Hello AL Raheem Engineering, I would like to inquire about your machines.")}
+                  href={whatsAppUrl("Hello AL Raheem Engineering, I would like to inquire about your packaging machines.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white"
                 >
-                  WhatsApp inquiry
+                  WhatsApp Inquiry
                 </a>
               </li>
             </ul>
-            <div className="mt-6 flex flex-wrap gap-3">
+
+            <div className="mt-6 border-t border-white/10 pt-4">
+              <p className="mb-3 text-[11px] font-semibold uppercase tracking-wider text-white/50">
+                Policies & Terms
+              </p>
+              <div className="flex flex-wrap gap-x-3 gap-y-1.5 text-xs text-white/60">
+                {LEGAL_LINKS.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="transition-colors hover:text-white"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-2.5">
               {SOCIAL_LINKS.map((item) => (
                 <a
                   key={item.platform}
@@ -103,11 +148,11 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   title={item.platform}
-                  className={`group relative flex h-10 w-10 items-center justify-center rounded-full border border-white/12 bg-white text-primary shadow-sm transition duration-200 hover:scale-[1.08] ${item.hoverClass}`}
+                  className={`group relative flex h-9 w-9 items-center justify-center rounded-full border border-white/12 bg-white text-primary shadow-sm transition duration-200 hover:scale-[1.08] ${item.hoverClass}`}
                   aria-label={item.ariaLabel}
                 >
-                  <SocialIcon platform={item.platform} className="h-4 w-4" />
-                  <span className="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-primary px-2.5 py-1 text-[11px] font-semibold text-white opacity-0 shadow-lg transition group-hover:opacity-100">
+                  <SocialIcon platform={item.platform} className="h-3.5 w-3.5" />
+                  <span className="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-primary px-2 py-0.5 text-[10px] font-semibold text-white opacity-0 shadow-lg transition group-hover:opacity-100">
                     {item.platform}
                   </span>
                 </a>
@@ -120,10 +165,10 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <Container className="flex flex-col items-center justify-between gap-3 py-6 sm:flex-row">
           <p className="text-xs text-white/45">
-            Copyright {new Date().getFullYear()} {COMPANY.legalName}. All rights reserved.
+            © {new Date().getFullYear()} {COMPANY.legalName}. All rights reserved.
           </p>
           <p className="text-xs text-white/45">
-            Lahore, Pakistan - Industrial packaging machines
+            Lahore, Pakistan — Industrial Packaging Machines & Systems
           </p>
         </Container>
       </div>
