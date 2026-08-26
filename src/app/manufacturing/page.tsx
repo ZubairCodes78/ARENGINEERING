@@ -1,21 +1,67 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import Container from "@/components/ui/Container";
-import { MANUFACTURING_STEPS } from "@/lib/constants";
+import { COMPANY, MANUFACTURING_STEPS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Manufacturing Process | AL Raheem Engineering",
+  title: "Packaging Machine Manufacturing Process | AL RAHEEM ENGINEERING Lahore",
   description:
-    "Factory workflow, quality control, machine assembly, and testing process for AL Raheem Engineering packaging machines.",
+    "Explore the industrial machine manufacturing process at AL Raheem Engineering in Lahore. From application review, engineering design, fabrication, assembly, to pre-dispatch testing.",
+  keywords: [
+    "packaging machine manufacturing Lahore",
+    "industrial machine fabrication Pakistan",
+    "packaging machinery assembly",
+    "packaging machine quality control",
+    "custom machine manufacturing Pakistan",
+  ],
+  alternates: {
+    canonical: "/manufacturing",
+  },
+  openGraph: {
+    title: "Packaging Machine Manufacturing Process | AL RAHEEM ENGINEERING Lahore",
+    description:
+      "Disciplined factory workflow from application review and precision engineering to fabrication, assembly, and testing.",
+    url: `${COMPANY.websiteUrl}/manufacturing`,
+    type: "website",
+    siteName: COMPANY.name,
+    locale: "en_PK",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Packaging Machine Manufacturing Process | AL RAHEEM ENGINEERING",
+    description:
+      "Factory workflow and engineering discipline behind AR industrial packaging machines in Lahore, Pakistan.",
+  },
 };
 
 export default function ManufacturingPage() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "@id": `${COMPANY.websiteUrl}/manufacturing#howto`,
+    name: "Industrial Packaging Machine Manufacturing Process",
+    description:
+      "Step-by-step engineering and fabrication process for industrial packaging machines by AL Raheem Engineering in Lahore, Pakistan.",
+    step: MANUFACTURING_STEPS.map((s, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: s.title,
+      text: s.description,
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
       <PageHeader
         label="Manufacturing Process"
         title="Factory workflow from review to testing"
-        description="A disciplined build process helps keep machine configuration clear, assembly quality consistent, and dispatch readiness practical."
+        description="A disciplined build process helps keep machine configuration clear, assembly quality consistent, and dispatch readiness practical across Pakistan."
         current="Manufacturing"
       />
       <section className="bg-light-gray py-28 lg:py-[120px]">

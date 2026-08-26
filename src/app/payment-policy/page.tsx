@@ -3,8 +3,11 @@ import PolicyPage from "@/components/PolicyPage";
 import { PAYMENT_STEPS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Payment Policy | AL Raheem Engineering",
-  description: "Payment terms for AL Raheem Engineering machine orders.",
+  title: "Payment Policy | AL RAHEEM ENGINEERING",
+  description: "Standard industrial payment terms and milestones for AL Raheem Engineering machine orders.",
+  alternates: {
+    canonical: "/payment-policy",
+  },
 };
 
 export default function PaymentPolicyPage() {

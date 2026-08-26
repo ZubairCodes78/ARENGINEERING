@@ -21,7 +21,7 @@ export default function FounderPremium({ preview = false }: FounderPremiumProps)
               <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-border bg-light-gray shadow-sm">
                 <Image
                   src="/images/Founder.png"
-                  alt={FOUNDER.name}
+                  alt="Abdul Sattar - Founder & Chief Packaging Machine Engineer AL Raheem Engineering Lahore"
                   fill
                   className="object-cover"
                   priority

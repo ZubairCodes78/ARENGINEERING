@@ -4,12 +4,25 @@ import { ArrowRight, Calendar, Image as ImageIcon } from "lucide-react";
 import Container from "@/components/ui/Container";
 import FadeUp from "@/components/ui/FadeUp";
 import Button from "@/components/ui/Button";
-import { EVENTS } from "@/lib/constants";
+import { COMPANY, EVENTS } from "@/lib/constants";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Life at AL RAHEEM ENGINEERING | Company Culture & Events",
-  description: "Behind every machine we build is a dedicated team committed to quality, innovation, and excellence. Explore our company culture, team events, and memorable moments.",
+  description:
+    "Behind every packaging machine we build is a dedicated team committed to quality, innovation, and engineering excellence in Lahore, Pakistan.",
+  alternates: {
+    canonical: "/galleryhb",
+  },
+  openGraph: {
+    title: "Life at AL RAHEEM ENGINEERING | Company Culture & Events",
+    description:
+      "Explore AL Raheem Engineering team culture, factory moments, and company events in Lahore, Pakistan.",
+    url: `${COMPANY.websiteUrl}/galleryhb`,
+    type: "website",
+    siteName: COMPANY.name,
+    locale: "en_PK",
+  },
 };
 
 export default function GalleryPage() {

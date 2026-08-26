@@ -24,7 +24,7 @@ export default function TrustedClients() {
               <div className="group flex h-[120px] w-full items-center justify-center">
                 <Image
                   src={client.logo}
-                  alt={`${client.name} logo`}
+                  alt={`${client.name} - Industrial Packaging Machinery Client of AL Raheem Engineering`}
                   width={360}
                   height={144}
                   className="h-auto max-h-[72px] w-auto object-contain grayscale transition duration-300 group-hover:scale-[1.04] group-hover:grayscale-0"

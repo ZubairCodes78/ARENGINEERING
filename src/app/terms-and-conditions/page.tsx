@@ -2,8 +2,11 @@ import type { Metadata } from "next";
 import PolicyPage from "@/components/PolicyPage";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | AL Raheem Engineering",
-  description: "Terms and conditions for AL Raheem Engineering website and machine inquiries.",
+  title: "Terms & Conditions | AL RAHEEM ENGINEERING",
+  description: "Commercial terms and conditions for AL Raheem Engineering website and machine inquiries.",
+  alternates: {
+    canonical: "/terms-and-conditions",
+  },
 };
 
 export default function TermsPage() {

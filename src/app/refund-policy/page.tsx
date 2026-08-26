@@ -2,8 +2,11 @@ import type { Metadata } from "next";
 import PolicyPage from "@/components/PolicyPage";
 
 export const metadata: Metadata = {
-  title: "Refund Policy | AL Raheem Engineering",
-  description: "Refund policy for custom industrial machinery orders from AL Raheem Engineering.",
+  title: "Refund Policy | AL RAHEEM ENGINEERING",
+  description: "Refund terms and custom machinery order review policy for AL Raheem Engineering.",
+  alternates: {
+    canonical: "/refund-policy",
+  },
 };
 
 export default function RefundPolicyPage() {

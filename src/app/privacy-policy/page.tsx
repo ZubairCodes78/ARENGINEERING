@@ -3,8 +3,11 @@ import PolicyPage from "@/components/PolicyPage";
 import { COMPANY } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | AL Raheem Engineering",
-  description: "Privacy policy for AL Raheem Engineering inquiries and website contact information.",
+  title: "Privacy Policy | AL RAHEEM ENGINEERING",
+  description: "Privacy policy for AL Raheem Engineering inquiries, customer data, and website contact information.",
+  alternates: {
+    canonical: "/privacy-policy",
+  },
 };
 
 export default function PrivacyPolicyPage() {

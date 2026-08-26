@@ -4,20 +4,32 @@ export const COMPANY = {
   tagline: "Industrial Packaging Machine Manufacturer",
   website: "alraheemengineering.com",
   websiteUrl: "https://alraheemengineering.com",
+  foundingYear: 2020,
+  founderExperienceSince: 1990,
   description:
     "Designing reliable packaging machines engineered for performance, precision and long-term industrial use.",
   address: {
     line1: "Iqbal Chowk, Ashayana Road",
     line2: "Bank Stop",
     city: "Lahore",
+    state: "Punjab",
+    postalCode: "54000",
     country: "Pakistan",
+    countryCode: "PK",
     full: "Iqbal Chowk, Ashayana Road, Bank Stop, Lahore, Pakistan",
   },
+  geo: {
+    latitude: 31.4258,
+    longitude: 74.3414,
+  },
+  areaServed: ["Pakistan", "International"],
   phone: "0303-4142423",
   phoneRaw: "03034142423",
+  phoneInternational: "+923034142423",
   whatsapp: "923034142423",
   email: "info@alraheemengineering.com",
   hours: "Monday - Saturday: 8:00 AM - 7:00 PM",
+  openingHours: "Mo-Sa 08:00-19:00",
 } as const;
 
 export const NAV_LINKS = [
@@ -40,38 +52,52 @@ export const LEGAL_LINKS = [
 export const INDUSTRIES = [
   {
     name: "Food",
-    description: "Reliable packaging systems for dry foods, grains, and FMCG products.",
+    slug: "food",
+    description: "Reliable packaging systems for dry foods, grains, pasta, vermicelli, and FMCG products.",
     icon: "UtensilsCrossed" as const,
+    machineModels: ["AR-Noodle", "AR-210"],
   },
   {
     name: "Confectionery",
-    description: "High-speed wrapping and pouch packing for toffee, candy, and chocolate.",
+    slug: "confectionery",
+    description: "High-speed wrapping and pouch packing for toffee, candy, chocolate, and chewing gum.",
     icon: "Candy" as const,
+    machineModels: ["AR-800", "AR-Toffee", "AR-Zombie"],
   },
   {
     name: "Bakery",
-    description: "Flow wrap machines for biscuits, rusk, cakes, wafers, and baked goods.",
+    slug: "bakery",
+    description: "Horizontal flow wrap machines for biscuits, rusk, cakes, wafers, crackers, and baked goods.",
     icon: "Croissant" as const,
+    machineModels: ["AR-210", "AR-300", "AR-200"],
   },
   {
     name: "Snacks",
-    description: "Production-ready systems for chips, nimco, extruded snacks, and portions.",
+    slug: "snacks",
+    description: "Production-ready systems for chips, nimco, extruded snacks, wafers, and portion packs.",
     icon: "Package" as const,
+    machineModels: ["AR-Zombie", "AR-210"],
   },
   {
     name: "Soap",
-    description: "Horizontal wrapping systems for soap bars and personal care blocks.",
+    slug: "soap",
+    description: "Horizontal flow wrapping systems for laundry soap bars, toilet soaps, and personal care blocks.",
     icon: "Droplets" as const,
+    machineModels: ["AR-210", "AR-200"],
   },
   {
     name: "Cosmetics",
-    description: "Liquid-over-wrap and sachet packaging for creams and cosmetic packs.",
+    slug: "cosmetics",
+    description: "Liquid-over-wrap and sachet packaging for face wash, creams, hair color, and cosmetic packs.",
     icon: "Sparkles" as const,
+    machineModels: ["AR-150"],
   },
   {
     name: "Pharmaceutical",
-    description: "Precise sealing and controlled packaging for regulated production lines.",
+    slug: "pharmaceutical",
+    description: "Precise sealing and controlled packaging for regulated production lines and medical sachets.",
     icon: "Pill" as const,
+    machineModels: ["AR-800", "AR-Zombie"],
   },
 ] as const;
 
@@ -228,24 +254,34 @@ export const TESTIMONIALS = [
 
 export const FAQS = [
   {
-    question: "Which industries do your machines serve?",
+    question: "Where is AL Raheem Engineering located and where are machines manufactured?",
     answer:
-      "Our packaging machines serve food, confectionery, bakery, snacks, soap, cosmetics, and pharmaceutical applications.",
+      "AL Raheem Engineering is located at Iqbal Chowk, Ashayana Road, Bank Stop, Lahore, Pakistan. All AR packaging machines are engineered and manufactured in our Lahore facility with local parts support.",
   },
   {
-    question: "Do you provide installation and operator training?",
+    question: "What types of industrial packaging machines does AL Raheem Engineering manufacture in Pakistan?",
     answer:
-      "Yes. We provide installation guidance, commissioning support, and operator training so the machine is ready for production.",
+      "We manufacture flow wrap machines, high-speed candy packing machines (up to 800 packs/min), toffee wrapping machines (twist and fold wrap), multi-purpose zombie packing machines, biscuit and rusk packaging machines, noodle packing machines, ice cream wrappers, and cosmetic sachet packing systems.",
   },
   {
-    question: "Can a machine be configured for our product?",
+    question: "Which industries do your packaging machines serve?",
     answer:
-      "Yes. Pack size, film type, speed, sealing format, and line integration can be reviewed for your product and factory layout.",
+      "Our packaging machines serve food, confectionery, bakery, snacks, soap, cosmetics, personal care, and pharmaceutical production sectors across Pakistan and overseas markets.",
   },
   {
-    question: "How do we request a quotation?",
+    question: "Do you provide on-site installation, commissioning, and operator training?",
     answer:
-      "Contact us by phone, WhatsApp, or email with your product type, pack size, and required output speed.",
+      "Yes. Every machine delivery includes installation guidance, commissioning support, and comprehensive operator training to ensure smooth production start-up.",
+  },
+  {
+    question: "Can a packaging machine be configured for our specific product size and film?",
+    answer:
+      "Yes. Pack size, film material, registration eye, sealing format, speed, and conveyor feed can be configured to match your specific product dimensions and factory layout.",
+  },
+  {
+    question: "How do we request a machine quotation and delivery timeline?",
+    answer:
+      "You can request a quotation directly through our website contact form, via phone (+92-303-4142423), or by WhatsApp with your product sample dimensions, desired output speed, and film specifications.",
   },
 ] as const;
 

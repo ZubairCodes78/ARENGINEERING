@@ -9,8 +9,10 @@ import {
   ChevronRight,
   Cpu,
   Download,
+  Factory,
   FileCog,
   FileText,
+  HelpCircle,
   ShieldCheck,
   Wrench,
 } from "lucide-react";
@@ -22,7 +24,7 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import FadeUp from "@/components/ui/FadeUp";
-import { COMPANY, YOUTUBE_CHANNEL_URL, productWhatsAppMessage, whatsAppUrl } from "@/lib/constants";
+import { COMPANY, INDUSTRIES, YOUTUBE_CHANNEL_URL, productWhatsAppMessage, whatsAppUrl } from "@/lib/constants";
 import {
   getAllMachineSlugs,
   getMachineSlug,
@@ -50,31 +52,45 @@ export async function generateMetadata({ params }: MachineDetailPageProps): Prom
   }
 
   const canonical = `/machines/${getMachineSlug(product.slug)}`;
-  const image = getProductImages(product)[0];
+  const images = getProductImages(product).map((img) => ({
+    url: img,
+    width: 1200,
+    height: 630,
+    alt: `${product.name} - Industrial Packaging Machine Lahore Pakistan`,
+  }));
+
+  const title = product.seoTitle ?? `${product.name} | Industrial Packaging Machine Pakistan`;
+  const description = product.seoDescription ?? product.shortDescription;
 
   return {
-    title: `${product.name} | AL RAHEEM ENGINEERING`,
-    description: product.shortDescription,
+    title,
+    description,
+    keywords: product.targetKeywords ?? [
+      product.name,
+      product.model,
+      product.category,
+      "packaging machine Pakistan",
+      "packaging machinery manufacturer Lahore",
+    ],
     alternates: {
       canonical,
     },
     openGraph: {
-      title: `${product.name} | AL RAHEEM ENGINEERING`,
-      description: product.shortDescription,
+      title,
+      description,
       url: `${COMPANY.websiteUrl}${canonical}`,
       type: "website",
-      images: [
-        {
-          url: image,
-          alt: product.name,
-        },
-      ],
+      siteName: COMPANY.name,
+      locale: "en_PK",
+      images,
     },
     twitter: {
       card: "summary_large_image",
-      title: `${product.name} | AL RAHEEM ENGINEERING`,
-      description: product.shortDescription,
-      images: [image],
+      title,
+      description,
+      images: [images[0].url],
+      site: "@Alraheemengine",
+      creator: "@Alraheemengine",
     },
   };
 }
@@ -94,6 +110,12 @@ export default async function MachineDetailPage({ params }: MachineDetailPagePro
   const technicalPath = getProductTechnicalPath(product.slug);
   const machineUrl = `${COMPANY.websiteUrl}/machines/${getMachineSlug(product.slug)}`;
   const productTitle = product.name.replace(/\s*\([^)]*\)\s*$/, "");
+
+  // Match industries for cross-linking
+  const matchedIndustries = INDUSTRIES.filter((ind) =>
+    product.industrySlugs?.includes(ind.slug)
+  );
+
   const downloadCards = [
     {
       title: "Product Brochure",
@@ -108,50 +130,103 @@ export default async function MachineDetailPage({ params }: MachineDetailPagePro
       href: technicalPath,
     },
   ];
+
+  // Schema.org Graph
+  const schemaGraph: Record<string, unknown>[] = [
+    {
+      "@type": "Product",
+      "@id": `${machineUrl}#product`,
+      name: product.name,
+      model: product.model,
+      sku: product.model,
+      mpn: product.model,
+      category: product.category,
+      description: product.description,
+      brand: {
+        "@type": "Brand",
+        name: COMPANY.name,
+      },
+      manufacturer: {
+        "@type": "Organization",
+        name: COMPANY.name,
+        url: COMPANY.websiteUrl,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: COMPANY.address.city,
+          addressCountry: COMPANY.address.countryCode,
+        },
+      },
+      image: productImages.map((image) => `${COMPANY.websiteUrl}${image}`),
+      url: machineUrl,
+      offers: {
+        "@type": "Offer",
+        url: machineUrl,
+        priceCurrency: "PKR",
+        price: "Contact for Quotation",
+        priceValidUntil: "2027-12-31",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: {
+          "@type": "Organization",
+          name: COMPANY.name,
+        },
+      },
+      additionalProperty: product.specs.map((spec) => ({
+        "@type": "PropertyValue",
+        name: spec.label,
+        value: spec.value,
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${machineUrl}#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: COMPANY.websiteUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Machines",
+          item: `${COMPANY.websiteUrl}/machines`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: product.name,
+          item: machineUrl,
+        },
+      ],
+    },
+  ];
+
+  if (product.faqs && product.faqs.length > 0) {
+    schemaGraph.push({
+      "@type": "FAQPage",
+      "@id": `${machineUrl}#faqs`,
+      mainEntity: product.faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    });
+  }
+
   return (
     <main className="bg-white pb-36 pt-24 lg:pb-[120px] lg:pt-28">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([
-            {
-              "@context": "https://schema.org",
-              "@type": "Product",
-              name: product.name,
-              brand: {
-                "@type": "Brand",
-                name: COMPANY.name,
-              },
-              category: product.category,
-              description: product.shortDescription,
-              image: productImages.map((image) => `${COMPANY.websiteUrl}${image}`),
-              url: machineUrl,
-            },
-            {
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Home",
-                  item: COMPANY.websiteUrl,
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Machines",
-                  item: `${COMPANY.websiteUrl}/machines`,
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: product.name,
-                  item: machineUrl,
-                },
-              ],
-            },
-          ]),
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": schemaGraph,
+          }),
         }}
       />
 
@@ -202,10 +277,27 @@ export default async function MachineDetailPage({ params }: MachineDetailPagePro
               <p className="text-sm font-semibold text-secondary">Overview</p>
               <h2 className="mt-3 font-heading text-4xl font-semibold text-primary">Built for dependable industrial packaging</h2>
               <p className="mt-4 max-w-2xl text-sm leading-7 text-dark-gray/78">
-                A focused overview of the machine purpose, production role and industrial value.
+                A focused overview of the machine purpose, production role and industrial value engineered in Lahore, Pakistan.
               </p>
               <div className="mt-8 rounded-2xl border border-border bg-white p-8 shadow-[0_16px_44px_rgba(8,40,68,0.055)]">
                 <p className="max-w-4xl text-base leading-8 text-dark-gray">{product.description}</p>
+                {matchedIndustries.length > 0 && (
+                  <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-border pt-6">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-dark-gray/70">
+                      Recommended Industries:
+                    </span>
+                    {matchedIndustries.map((ind) => (
+                      <Link
+                        key={ind.slug}
+                        href="/industries"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-border bg-light-gray px-3.5 py-1 text-xs font-medium text-primary transition hover:border-secondary hover:text-secondary"
+                      >
+                        <Factory className="h-3 w-3 text-secondary" />
+                        {ind.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
             </section>
           </FadeUp>
@@ -237,7 +329,7 @@ export default async function MachineDetailPage({ params }: MachineDetailPagePro
               </p>
               <h2 className="mt-3 font-heading text-4xl font-semibold text-primary">Machine Specifications</h2>
               <p className="mt-4 max-w-2xl text-sm leading-7 text-dark-gray/78">
-                Complete technical specifications of the machine.
+                Complete verified technical specifications of the machine.
               </p>
               <div className="mt-8 overflow-hidden rounded-[18px] border border-border bg-white shadow-[0_18px_52px_rgba(8,40,68,0.07)]">
                 <div className="grid grid-cols-[minmax(0,0.44fr)_minmax(0,0.56fr)] border-b border-border bg-primary text-white">
@@ -291,6 +383,40 @@ export default async function MachineDetailPage({ params }: MachineDetailPagePro
               </div>
             </section>
           </FadeUp>
+
+          {product.faqs && product.faqs.length > 0 && (
+            <FadeUp>
+              <section id="faqs" className="border-t border-border pt-12">
+                <p className="text-sm font-semibold text-secondary">Machine FAQs</p>
+                <h2 className="mt-3 font-heading text-4xl font-semibold text-primary">
+                  Frequently Asked Questions about {product.model}
+                </h2>
+                <p className="mt-4 max-w-2xl text-sm leading-7 text-dark-gray/78">
+                  Direct answers to common buyer questions regarding specifications, operations, and support in Pakistan.
+                </p>
+                <div className="mt-8 grid gap-4">
+                  {product.faqs.map((faq) => (
+                    <article
+                      key={faq.question}
+                      className="rounded-2xl border border-border bg-white p-7 shadow-sm transition hover:border-secondary/40"
+                    >
+                      <div className="flex items-start gap-3">
+                        <HelpCircle className="mt-1 h-5 w-5 shrink-0 text-secondary" strokeWidth={2} />
+                        <div>
+                          <h3 className="font-heading text-lg font-semibold text-primary">
+                            {faq.question}
+                          </h3>
+                          <p className="mt-3 text-sm leading-7 text-dark-gray">
+                            {faq.answer}
+                          </p>
+                        </div>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            </FadeUp>
+          )}
 
           <FadeUp>
             <section id="downloads" className="border-t border-border pt-12">

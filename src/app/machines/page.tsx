@@ -2,26 +2,92 @@ import type { Metadata } from "next";
 import ProductCard from "@/components/ProductCard";
 import PageHeader from "@/components/PageHeader";
 import Container from "@/components/ui/Container";
-import { CATEGORIES, PRODUCTS } from "@/lib/products";
+import { COMPANY } from "@/lib/constants";
+import { CATEGORIES, PRODUCTS, getMachineSlug } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Machines | AL RAHEEM ENGINEERING",
+  title: "Packaging Machines Pakistan | Industrial Packaging Machine Catalogue",
   description:
-    "View the complete AR machine catalog from AL Raheem Engineering, including candy packing, toffee wrapping, flow wrap, biscuit, noodle, and ice cream packing machines.",
+    "Explore the complete industrial packaging machinery catalogue from AL Raheem Engineering Lahore. Featuring high-speed candy packing, toffee wrapping, horizontal flow wrap, biscuit, noodle, and soap packaging machines.",
+  keywords: [
+    "packaging machines Pakistan",
+    "packing machine Pakistan",
+    "industrial packaging machines",
+    "packaging machine manufacturer Pakistan",
+    "packaging machinery Lahore",
+    "flow wrap machine",
+    "candy packing machine",
+    "toffee wrapping machine",
+    "biscuit packing machine",
+    "noodle packing machine",
+  ],
+  alternates: {
+    canonical: "/machines",
+  },
+  openGraph: {
+    title: "Packaging Machines Pakistan | Industrial Packaging Machine Catalogue",
+    description:
+      "Explore the complete industrial packaging machinery catalogue from AL Raheem Engineering Lahore. High-speed flow wrap, candy packing, toffee wrapping, biscuit, and noodle machines.",
+    url: `${COMPANY.websiteUrl}/machines`,
+    type: "website",
+    siteName: COMPANY.name,
+    locale: "en_PK",
+    images: [
+      {
+        url: "/images/hero-flow-wrap.png",
+        width: 1200,
+        height: 630,
+        alt: "AL Raheem Engineering Packaging Machines Catalog",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Packaging Machines Pakistan | Industrial Packaging Machine Catalogue",
+    description:
+      "Complete AR series industrial packaging machinery catalogue from AL Raheem Engineering Lahore, Pakistan.",
+    images: ["/images/hero-flow-wrap.png"],
+  },
 };
 
 export default function MachinesPage() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${COMPANY.websiteUrl}/machines#collection`,
+    name: "Industrial Packaging Machines Catalogue",
+    description:
+      "Complete catalogue of industrial packaging machines manufactured by AL Raheem Engineering in Lahore, Pakistan.",
+    url: `${COMPANY.websiteUrl}/machines`,
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: PRODUCTS.map((product, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: product.name,
+        url: `${COMPANY.websiteUrl}/machines/${getMachineSlug(product.slug)}`,
+        description: product.shortDescription,
+      })),
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
       <PageHeader
         label="Complete Machine Catalogue"
         title="Industrial packaging machines"
-        description="The complete AL Raheem Engineering machine catalog. Every AR series model links to a dedicated specification page for production buyers."
+        description="The complete AL Raheem Engineering machine catalog. Every AR series model links to a dedicated specification page for production buyers across Pakistan and international markets."
         current="Machines"
       />
       <section className="bg-light-gray py-28 lg:py-[120px]">
         <Container>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2" aria-label="Packaging categories">
             {CATEGORIES.map((category) => (
               <span
                 key={category}

@@ -2,8 +2,11 @@ import type { Metadata } from "next";
 import PolicyPage from "@/components/PolicyPage";
 
 export const metadata: Metadata = {
-  title: "Shipping Policy | AL Raheem Engineering",
-  description: "Shipping and delivery policy for AL Raheem Engineering machinery orders.",
+  title: "Shipping & Delivery Policy | AL RAHEEM ENGINEERING",
+  description: "Machinery shipping and delivery dispatch coordination policy for AL Raheem Engineering orders across Pakistan.",
+  alternates: {
+    canonical: "/shipping-policy",
+  },
 };
 
 export default function ShippingPolicyPage() {

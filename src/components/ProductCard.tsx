@@ -16,7 +16,13 @@ export default function ProductCard({ product }: ProductCardProps) {
       className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-[0_14px_40px_rgba(8,40,68,0.06)] transition-all duration-300 hover:-translate-y-1.5 hover:border-secondary/40 hover:shadow-[0_28px_70px_rgba(8,40,68,0.14)]"
     >
       <div className="relative min-h-[320px] overflow-hidden border-b border-border" aria-label={`${product.name} machine visual`}>
-        <Image src={image} alt={product.name} fill sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+        <Image
+          src={image}
+          alt={`${product.name} - Industrial Packaging Machine AL Raheem Engineering Lahore`}
+          fill
+          sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+        />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,40,68,0.08),rgba(8,40,68,0.58))]" />
         <div className="absolute left-6 top-6 rounded-md border border-white/20 bg-white/90 px-3 py-2 text-primary shadow-sm backdrop-blur">
           <p className="text-xs font-semibold">{product.model}</p>
