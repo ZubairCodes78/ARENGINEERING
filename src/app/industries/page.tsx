@@ -17,25 +17,26 @@ import { COMPANY, INDUSTRIES } from "@/lib/constants";
 import { PRODUCTS, getMachineSlug } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Packaging Machine Applications by Industry | AL RAHEEM ENGINEERING",
+  title: "Packaging Machine Applications by Industry in Pakistan | AL RAHEEM ENGINEERING",
   description:
-    "Industrial packaging solutions for food, confectionery, bakery, snacks, soap, cosmetics, and pharmaceutical manufacturers across Pakistan and worldwide by AL Raheem Engineering.",
+    "Industrial packaging solutions for food, confectionery, bakery, snacks, soap, cosmetics, and pharmaceutical manufacturers across Pakistan by AL Raheem Engineering.",
   keywords: [
     "food packaging machines Pakistan",
-    "confectionery packaging machines",
-    "bakery packaging machinery Lahore",
-    "soap packaging machines",
-    "cosmetic packaging machines",
-    "pharmaceutical packaging machinery",
+    "confectionery packaging machines Pakistan",
+    "bakery packaging machinery Pakistan",
+    "soap packaging machines Pakistan",
+    "cosmetic packaging machines Pakistan",
+    "pharmaceutical packaging machinery Pakistan",
     "industrial packaging solutions Pakistan",
+    "packaging machine manufacturer Pakistan",
   ],
   alternates: {
     canonical: "/industries",
   },
   openGraph: {
-    title: "Packaging Machine Applications by Industry | AL RAHEEM ENGINEERING",
+    title: "Packaging Machine Applications by Industry in Pakistan | AL RAHEEM ENGINEERING",
     description:
-      "Engineered packaging systems for food, confectionery, bakery, snacks, soap, cosmetics, and pharmaceutical factories.",
+      "Engineered packaging systems for food, confectionery, bakery, snacks, soap, cosmetics, and pharmaceutical factories in Pakistan.",
     url: `${COMPANY.websiteUrl}/industries`,
     type: "website",
     siteName: COMPANY.name,
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Packaging Machine Applications by Industry | AL RAHEEM ENGINEERING",
+    title: "Packaging Machine Applications by Industry in Pakistan | AL RAHEEM ENGINEERING",
     description:
       "Engineered packaging systems for food, confectionery, bakery, snacks, soap, cosmetics, and pharmaceutical factories in Pakistan.",
   },

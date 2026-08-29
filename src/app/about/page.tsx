@@ -5,11 +5,13 @@ import Container from "@/components/ui/Container";
 import { COMPANY, MISSION, TIMELINE, VISION, WHY_CHOOSE_US } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "About Us | Industrial Packaging Machine Manufacturer Lahore",
+  title: "About Us | Packaging Machine Manufacturer Pakistan | AL RAHEEM ENGINEERING",
   description:
     "Learn about AL Raheem Engineering, a leading industrial packaging machinery manufacturer based in Lahore, Pakistan. Built on over 35 years of engineering experience since 1990.",
   keywords: [
-    "AL Raheem Engineering about",
+    "Packaging Machine Manufacturer Pakistan",
+    "Packaging Machinery Pakistan",
+    "Packing Machine Manufacturer Pakistan",
     "packaging machine manufacturer Lahore",
     "industrial packaging company Pakistan",
     "Abdul Sattar packaging engineer",
@@ -19,7 +21,7 @@ export const metadata: Metadata = {
     canonical: "/about",
   },
   openGraph: {
-    title: "About Us | Industrial Packaging Machine Manufacturer Lahore",
+    title: "About Us | Packaging Machine Manufacturer Pakistan | AL RAHEEM ENGINEERING",
     description:
       "AL Raheem Engineering designs and manufactures dependable packaging machines for food, confectionery, bakery, and FMCG factories across Pakistan.",
     url: `${COMPANY.websiteUrl}/about`,
@@ -29,9 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Us | AL RAHEEM ENGINEERING Lahore",
+    title: "About Us | Packaging Machine Manufacturer Pakistan",
     description:
-      "Industrial packaging machine manufacturer serving Pakistan and international markets with precision engineering.",
+      "Industrial packaging machine manufacturer serving Pakistan with precision engineering since 1990.",
   },
 };
 

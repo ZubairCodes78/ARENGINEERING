@@ -4,13 +4,14 @@ import Container from "@/components/ui/Container";
 import { BLOG_POSTS, COMPANY } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Industrial Packaging Articles & Guides | AL RAHEEM ENGINEERING",
+  title: "Industrial Packaging Articles & Guides Pakistan | AL RAHEEM ENGINEERING",
   description:
     "Industrial articles, machinery buying guides, packaging tips, and engineering updates from AL Raheem Engineering in Lahore, Pakistan.",
   keywords: [
-    "packaging machine buying guide",
+    "packaging machine buying guide Pakistan",
     "industrial packaging articles Pakistan",
     "how to choose a packaging machine",
+    "Packaging Machine Manufacturer Pakistan",
     "flow wrap machine guide",
     "packaging tips Pakistan",
   ],
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     canonical: "/blog",
   },
   openGraph: {
-    title: "Industrial Packaging Articles & Guides | AL RAHEEM ENGINEERING",
+    title: "Industrial Packaging Articles & Guides Pakistan | AL RAHEEM ENGINEERING",
     description:
       "Practical guidance on packaging machinery selection, film handling, and factory maintenance from Lahore, Pakistan.",
     url: `${COMPANY.websiteUrl}/blog`,
@@ -28,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Packaging Articles & Guides | AL RAHEEM ENGINEERING",
+    title: "Packaging Articles & Guides Pakistan | AL RAHEEM ENGINEERING",
     description:
-      "Expert industrial packaging guidance and technical articles from AL Raheem Engineering.",
+      "Expert industrial packaging guidance and technical articles from AL Raheem Engineering in Pakistan.",
   },
 };
 

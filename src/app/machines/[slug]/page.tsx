@@ -162,8 +162,6 @@ export default async function MachineDetailPage({ params }: MachineDetailPagePro
         "@type": "Offer",
         url: machineUrl,
         priceCurrency: "PKR",
-        price: "Contact for Quotation",
-        priceValidUntil: "2027-12-31",
         availability: "https://schema.org/InStock",
         itemCondition: "https://schema.org/NewCondition",
         seller: {

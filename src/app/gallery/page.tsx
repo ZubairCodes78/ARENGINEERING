@@ -5,9 +5,12 @@ import Container from "@/components/ui/Container";
 import { PRODUCTS } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Gallery | AL Raheem Engineering",
+  title: "Factory & Machine Gallery | AL RAHEEM ENGINEERING Pakistan",
   description:
-    "Factory gallery, machine gallery, installation gallery, and video-ready sections for AL Raheem Engineering.",
+    "Factory gallery, machine gallery, and installation gallery for AL Raheem Engineering in Lahore, Pakistan.",
+  alternates: {
+    canonical: "/gallery",
+  },
 };
 
 export default function GalleryPage() {

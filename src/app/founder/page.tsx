@@ -6,21 +6,22 @@ import Container from "@/components/ui/Container";
 import { COMPANY, FOUNDER } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Founder Abdul Sattar | 35+ Years Packaging Machine Engineer Lahore",
+  title: "Abdul Sattar | 35+ Years Packaging Machine Engineer in Pakistan",
   description:
-    "Founder profile of Abdul Sattar, chief packaging engineer at AL Raheem Engineering with over 35 years of industrial machine design and manufacturing experience in Pakistan since 1990.",
+    "Founder profile of Abdul Sattar, chief packaging machinery engineer at AL Raheem Engineering with over 35 years of machine design and manufacturing experience in Pakistan since 1990.",
   keywords: [
     "Abdul Sattar packaging engineer",
     "founder AL Raheem Engineering",
     "packaging machine builder Pakistan",
+    "Packaging Machine Manufacturer Pakistan",
     "industrial machinery designer Lahore",
-    "packaging engineer Lahore",
+    "packaging engineer Pakistan",
   ],
   alternates: {
     canonical: "/founder",
   },
   openGraph: {
-    title: "Founder Abdul Sattar | AL RAHEEM ENGINEERING Lahore",
+    title: "Abdul Sattar | 35+ Years Packaging Machine Engineer in Pakistan",
     description:
       "Abdul Sattar has designed, manufactured, and delivered dependable packaging machinery across Pakistan with 35+ years of practical engineering expertise since 1990.",
     url: `${COMPANY.websiteUrl}/founder`,
@@ -38,9 +39,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Founder Abdul Sattar | AL RAHEEM ENGINEERING",
+    title: "Abdul Sattar | 35+ Years Packaging Machine Engineer in Pakistan",
     description:
-      "35+ years of industrial packaging machine engineering expertise since 1990 in Lahore, Pakistan.",
+      "35+ years of industrial packaging machine engineering expertise since 1990 in Pakistan.",
     images: ["/images/Founder.png"],
   },
 };

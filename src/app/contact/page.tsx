@@ -8,23 +8,26 @@ import Container from "@/components/ui/Container";
 import { COMPANY, SOCIAL_LINKS, whatsAppUrl } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Packaging Machine Manufacturer Lahore | Contact AL RAHEEM ENGINEERING",
+  title: "Contact Packaging Machine Manufacturer Pakistan | AL RAHEEM ENGINEERING",
   description:
     "Contact AL Raheem Engineering in Lahore, Pakistan for packaging machinery price quotations, custom machine specifications, factory visits, and after-sales technical support.",
   keywords: [
+    "Packaging Machine Manufacturer Pakistan",
+    "Packaging Machinery Pakistan",
+    "Packing Machine Manufacturer Pakistan",
     "packaging machine manufacturer Lahore",
     "packaging machinery supplier Pakistan",
     "buy packaging machine Pakistan",
-    "AL Raheem Engineering Lahore contact",
-    "packaging machine price quotation Lahore",
+    "AL Raheem Engineering contact",
+    "packaging machine quotation Pakistan",
   ],
   alternates: {
     canonical: "/contact",
   },
   openGraph: {
-    title: "Contact AL RAHEEM ENGINEERING | Packaging Machine Manufacturer Lahore",
+    title: "Contact Packaging Machine Manufacturer Pakistan | AL RAHEEM ENGINEERING",
     description:
-      "Get in touch with our packaging machine engineering team in Lahore for quotations, custom machine builds, and technical support.",
+      "Get in touch with our packaging machine engineering team in Lahore for quotations, custom machine builds, and technical support across Pakistan.",
     url: `${COMPANY.websiteUrl}/contact`,
     type: "website",
     siteName: COMPANY.name,
@@ -32,9 +35,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact AL RAHEEM ENGINEERING | Lahore Pakistan",
+    title: "Contact Packaging Machine Manufacturer Pakistan",
     description:
-      "Contact AL Raheem Engineering for industrial packaging machine quotations and support.",
+      "Contact AL Raheem Engineering for industrial packaging machine quotations and support in Pakistan.",
   },
 };
 

@@ -4,19 +4,20 @@ import PageHeader from "@/components/PageHeader";
 import { COMPANY } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Client Testimonials & Industry Reviews | AL RAHEEM ENGINEERING",
+  title: "Client Testimonials & Reviews | Packaging Machinery Pakistan",
   description:
     "Read industrial client reviews and feedback on AL Raheem Engineering packaging machines from food, confectionery, bakery, and FMCG manufacturers across Pakistan.",
   keywords: [
     "AL Raheem Engineering reviews",
     "packaging machine testimonials Pakistan",
-    "industrial packaging machine clients Lahore",
+    "Packaging Machine Manufacturer Pakistan",
+    "industrial packaging machine clients Pakistan",
   ],
   alternates: {
     canonical: "/testimonials",
   },
   openGraph: {
-    title: "Client Testimonials & Reviews | AL RAHEEM ENGINEERING",
+    title: "Client Testimonials & Reviews | Packaging Machinery Pakistan",
     description:
       "Client feedback on machine reliability, sealing quality, and after-sales engineering support across Pakistan.",
     url: `${COMPANY.websiteUrl}/testimonials`,
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Client Testimonials | AL RAHEEM ENGINEERING",
+    title: "Client Testimonials | AL RAHEEM ENGINEERING Pakistan",
     description:
       "Feedback from confectionery, bakery, and FMCG packaging manufacturers across Pakistan.",
   },

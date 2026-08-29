@@ -6,28 +6,30 @@ import { COMPANY } from "@/lib/constants";
 import { CATEGORIES, PRODUCTS, getMachineSlug } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Packaging Machines Pakistan | Industrial Packaging Machine Catalogue",
+  title: "Packaging Machinery Pakistan | Industrial Packaging Machine Manufacturer",
   description:
-    "Explore the complete industrial packaging machinery catalogue from AL Raheem Engineering Lahore. Featuring high-speed candy packing, toffee wrapping, horizontal flow wrap, biscuit, noodle, and soap packaging machines.",
+    "Explore the complete industrial packaging machinery catalogue from AL Raheem Engineering Pakistan. Featuring high-speed candy packing, toffee wrapping, horizontal flow wrap, biscuit, noodle, and soap packaging machines.",
   keywords: [
-    "packaging machines Pakistan",
-    "packing machine Pakistan",
-    "industrial packaging machines",
-    "packaging machine manufacturer Pakistan",
-    "packaging machinery Lahore",
-    "flow wrap machine",
-    "candy packing machine",
-    "toffee wrapping machine",
-    "biscuit packing machine",
-    "noodle packing machine",
+    "Packaging Machine Manufacturer Pakistan",
+    "Packaging Machinery Pakistan",
+    "Packing Machine Manufacturer Pakistan",
+    "Industrial Packaging Machine Pakistan",
+    "Packaging Machine Lahore",
+    "Packaging Machinery Lahore",
+    "Flow Wrap Machine Pakistan",
+    "Candy Packing Machine Pakistan",
+    "Toffee Wrapping Machine Pakistan",
+    "Biscuit Packing Machine Pakistan",
+    "Noodle Packing Machine Pakistan",
+    "Soap Packing Machine Pakistan",
   ],
   alternates: {
     canonical: "/machines",
   },
   openGraph: {
-    title: "Packaging Machines Pakistan | Industrial Packaging Machine Catalogue",
+    title: "Packaging Machinery Pakistan | Industrial Packaging Machine Manufacturer",
     description:
-      "Explore the complete industrial packaging machinery catalogue from AL Raheem Engineering Lahore. High-speed flow wrap, candy packing, toffee wrapping, biscuit, and noodle machines.",
+      "Explore the complete industrial packaging machinery catalogue from AL Raheem Engineering Pakistan. High-speed flow wrap, candy packing, toffee wrapping, biscuit, and noodle machines.",
     url: `${COMPANY.websiteUrl}/machines`,
     type: "website",
     siteName: COMPANY.name,
@@ -37,15 +39,15 @@ export const metadata: Metadata = {
         url: "/images/hero-flow-wrap.png",
         width: 1200,
         height: 630,
-        alt: "AL Raheem Engineering Packaging Machines Catalog",
+        alt: "AL Raheem Engineering Packaging Machines Catalog Pakistan",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Packaging Machines Pakistan | Industrial Packaging Machine Catalogue",
+    title: "Packaging Machinery Pakistan | Industrial Packaging Machine Manufacturer",
     description:
-      "Complete AR series industrial packaging machinery catalogue from AL Raheem Engineering Lahore, Pakistan.",
+      "Complete AR series industrial packaging machinery catalogue from AL Raheem Engineering in Pakistan.",
     images: ["/images/hero-flow-wrap.png"],
   },
 };

@@ -4,21 +4,22 @@ import Container from "@/components/ui/Container";
 import { COMPANY, FAQS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Packaging Machine FAQs | Buyer Guide & Common Questions Pakistan",
+  title: "Packaging Machinery FAQs Pakistan | AL RAHEEM ENGINEERING",
   description:
-    "Frequently asked questions about industrial packaging machines in Pakistan. Learn about machine types, manufacturing in Lahore, installation, speed capabilities, power setups, and quotations.",
+    "Frequently asked questions about industrial packaging machines in Pakistan. Learn about machine types, manufacturing in Lahore, installation, speed capabilities, and quotations.",
   keywords: [
-    "packaging machine FAQs",
+    "Packaging Machine FAQs Pakistan",
+    "Packaging Machine Manufacturer Pakistan",
     "packaging machine price Pakistan",
-    "packaging machine manufacturer Lahore FAQs",
     "flow wrap machine questions",
     "packaging machinery buying guide Pakistan",
+    "AL Raheem Engineering FAQs",
   ],
   alternates: {
     canonical: "/faqs",
   },
   openGraph: {
-    title: "Packaging Machine FAQs | AL RAHEEM ENGINEERING Lahore",
+    title: "Packaging Machinery FAQs Pakistan | AL RAHEEM ENGINEERING",
     description:
       "Clear answers for manufacturers evaluating a new packaging machine, factory installation, film compatibility, or maintenance support in Pakistan.",
     url: `${COMPANY.websiteUrl}/faqs`,
@@ -28,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Packaging Machine FAQs | AL RAHEEM ENGINEERING",
+    title: "Packaging Machinery FAQs Pakistan | AL RAHEEM ENGINEERING",
     description:
-      "Answers to top industrial packaging machinery questions from AL Raheem Engineering Lahore, Pakistan.",
+      "Answers to top industrial packaging machinery questions from AL Raheem Engineering in Pakistan.",
   },
 };
 

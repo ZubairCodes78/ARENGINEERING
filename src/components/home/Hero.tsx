@@ -11,15 +11,15 @@ import { COMPANY } from "@/lib/constants";
 const slides = [
   {
     src: "/images/hero-flow-wrap.png",
-    alt: "AL Raheem Engineering - Flow Wrap Packaging Machine",
+    alt: "AL Raheem Engineering AR-210 Horizontal Flow Wrap Packaging Machine Pakistan",
   },
   {
     src: "/images/hero-candy-packing.png",
-    alt: "AL Raheem Engineering - High Speed Candy Packing Machine",
+    alt: "AL Raheem Engineering AR-800 High Speed Candy Packing Machine Pakistan",
   },
   {
     src: "/images/hero-pouch-line.png",
-    alt: "AL Raheem Engineering - Pouch Packaging Production Line",
+    alt: "AL Raheem Engineering Industrial Packaging Production Line Lahore Pakistan",
   },
 ];
 
@@ -83,13 +83,13 @@ export default function Hero() {
         <FadeUp className="w-full">
           <div className="mx-auto max-w-5xl text-center">
             <p className="text-sm font-semibold tracking-[0.02em] text-secondary">
-              Industrial packaging machines and processing systems
+              Packaging Machine Manufacturer in Pakistan
             </p>
             <h1 className="mx-auto mt-6 max-w-5xl font-heading text-5xl font-semibold leading-[1.02] text-white sm:text-6xl lg:text-7xl">
               {COMPANY.name}
             </h1>
             <p className="mt-5 font-heading text-2xl font-medium text-white/86 sm:text-3xl">
-              Industrial Packaging Machines Manufacturer
+              Industrial Packaging Machines in Pakistan
             </p>
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/76">
               Reliable Packaging Solutions Engineered for Precision, Performance and Long-Term

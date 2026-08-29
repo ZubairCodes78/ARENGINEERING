@@ -6,24 +6,24 @@ import SocialIcon from "@/components/SocialIcon";
 import { COMPANY, SOCIAL_LINKS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Social Media | AL Raheem Engineering",
+  title: "Official Social Channels | AL RAHEEM ENGINEERING Pakistan",
   description:
-    "Connect with AL Raheem Engineering on Instagram, Facebook, YouTube, LinkedIn and X.",
+    "Connect with AL Raheem Engineering on YouTube, Instagram, Facebook, LinkedIn, and X for industrial packaging machinery updates in Pakistan.",
   alternates: {
     canonical: "/social",
   },
   openGraph: {
-    title: "Connect With AL RAHEEM ENGINEERING",
+    title: "Official Social Channels | AL RAHEEM ENGINEERING Pakistan",
     description:
-      "Follow AL Raheem Engineering on Instagram, Facebook, YouTube, LinkedIn and X.",
+      "Follow AL Raheem Engineering on YouTube, Instagram, Facebook, LinkedIn, and X for packaging machinery demonstrations.",
     url: `${COMPANY.websiteUrl}/social`,
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Connect With AL RAHEEM ENGINEERING",
+    title: "Official Social Channels | AL RAHEEM ENGINEERING Pakistan",
     description:
-      "Official social media links for AL Raheem Engineering.",
+      "Official social media channels for AL Raheem Engineering in Pakistan.",
   },
 };
 

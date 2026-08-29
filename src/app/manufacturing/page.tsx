@@ -4,13 +4,14 @@ import Container from "@/components/ui/Container";
 import { COMPANY, MANUFACTURING_STEPS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Packaging Machine Manufacturing Process | AL RAHEEM ENGINEERING Lahore",
+  title: "Packaging Machine Manufacturing Process | AL RAHEEM ENGINEERING Pakistan",
   description:
-    "Explore the industrial machine manufacturing process at AL Raheem Engineering in Lahore. From application review, engineering design, fabrication, assembly, to pre-dispatch testing.",
+    "Explore the industrial packaging machine manufacturing process at AL Raheem Engineering in Lahore, Pakistan. Application review, engineering design, fabrication, assembly, and pre-dispatch testing.",
   keywords: [
+    "Packaging Machine Manufacturer Pakistan",
     "packaging machine manufacturing Lahore",
     "industrial machine fabrication Pakistan",
-    "packaging machinery assembly",
+    "packaging machinery assembly Pakistan",
     "packaging machine quality control",
     "custom machine manufacturing Pakistan",
   ],
@@ -18,9 +19,9 @@ export const metadata: Metadata = {
     canonical: "/manufacturing",
   },
   openGraph: {
-    title: "Packaging Machine Manufacturing Process | AL RAHEEM ENGINEERING Lahore",
+    title: "Packaging Machine Manufacturing Process | AL RAHEEM ENGINEERING Pakistan",
     description:
-      "Disciplined factory workflow from application review and precision engineering to fabrication, assembly, and testing.",
+      "Disciplined factory workflow from application review and precision engineering to fabrication, assembly, and testing in Pakistan.",
     url: `${COMPANY.websiteUrl}/manufacturing`,
     type: "website",
     siteName: COMPANY.name,
@@ -28,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Packaging Machine Manufacturing Process | AL RAHEEM ENGINEERING",
+    title: "Packaging Machine Manufacturing Process | AL RAHEEM ENGINEERING Pakistan",
     description:
-      "Factory workflow and engineering discipline behind AR industrial packaging machines in Lahore, Pakistan.",
+      "Factory workflow and engineering discipline behind AR industrial packaging machines in Pakistan.",
   },
 };
 
