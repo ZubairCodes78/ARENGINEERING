@@ -48,20 +48,21 @@ const PRODUCT_IMAGE_SETS = {
 
 export const PRODUCTS: Product[] = [
   {
-    id: "ar-zombie",
-    slug: "ar-zombie-packing-machine",
-    model: "AR-Zombie",
-    name: "Zombie Packing Machine (AR-Zombie)",
+    id: "ar-300",
+    slug: "ar-300",
+    model: "AR-300",
+    name: "Zombie Packing Machine (AR-300)",
     category: "Packing Machines",
     shortDescription:
       "Heavy-duty multi-purpose packing machine with precision sealing and inverter-controlled drive.",
     description:
-      "The AR Zombie Packing Machine is a robust multi-purpose packaging system for continuous industrial production. It is built for stable sealing, flexible operation, and long service life across confectionery, snacks, and portion-pack applications in Pakistan.",
-    seoTitle: "Zombie Packing Machine (AR-Zombie) | Multi-Purpose Pouch Wrapper Pakistan",
+      "The AR-300 Zombie Packing Machine is a robust multi-purpose packaging system for continuous industrial production. It is built for stable sealing, flexible operation, and long service life across confectionery, snacks, and portion-pack applications in Pakistan.",
+    seoTitle: "Zombie Packing Machine (AR-300) | Multi-Purpose Pouch Wrapper Pakistan",
     seoDescription:
-      "Heavy-duty AR-Zombie multi-purpose packing machine by AL Raheem Engineering Lahore. Engineered for toffee, candy, confectionery pouches, and portion packs with variable speed inverter.",
+      "Heavy-duty AR-300 multi-purpose packing machine by AL Raheem Engineering Lahore. Engineered for toffee, candy, confectionery pouches, and portion packs with variable speed inverter.",
     targetKeywords: [
       "zombie packing machine",
+      "AR-300 packing machine",
       "multi purpose packing machine",
       "confectionery pouch packing machine",
       "packing machine manufacturer Lahore",
@@ -102,38 +103,39 @@ export const PRODUCTS: Product[] = [
     ],
     faqs: [
       {
-        question: "What products are suitable for the AR-Zombie packing machine?",
+        question: "What products are suitable for the AR-300 Zombie packing machine?",
         answer:
-          "The AR-Zombie packing machine is configured for toffees, candies, confectionery pouches, and small dry portion packs requiring dependable heat sealing.",
+          "The AR-300 Zombie packing machine is configured for toffees, candies, confectionery pouches, and small dry portion packs requiring dependable heat sealing.",
       },
       {
-        question: "What drive and speed control mechanism is built into the AR-Zombie?",
+        question: "What drive and speed control mechanism is built into the AR-300?",
         answer:
-          "The AR-Zombie features an inverter-controlled variable speed electric motor and photo-electric eye registration for stable film feeding and precise seal timing.",
+          "The AR-300 features an inverter-controlled variable speed electric motor and photo-electric eye registration for stable film feeding and precise seal timing.",
       },
       {
-        question: "Where is the AR-Zombie manufactured and supported in Pakistan?",
+        question: "Where is the AR-300 manufactured and supported in Pakistan?",
         answer:
-          "The AR-Zombie is manufactured in Lahore by AL Raheem Engineering, with complete on-site commissioning, operator training, and local spare parts availability.",
+          "The AR-300 is manufactured in Lahore by AL Raheem Engineering, with complete on-site commissioning, operator training, and local spare parts availability.",
       },
     ],
     featured: true,
   },
   {
-    id: "ar-toffee",
-    slug: "ar-toffee-wrapping-machine",
-    model: "AR-Toffee",
-    name: "Toffee Wrapping Machine (AR-Toffee)",
-    category: "Wrapping Machines",
+    id: "ar-230",
+    slug: "ar-230",
+    model: "AR-230",
+    name: "Toffee Packing Machine (AR-230)",
+    category: "Packing Machines",
     shortDescription:
-      "High-speed automatic toffee wrapper with twist-wrap and fold-wrap capability up to 800 packs/min.",
+      "High-speed automatic toffee packing machine with twist-wrap and fold-wrap capability up to 800 packs/min.",
     description:
-      "The AR Toffee Wrapping Machine is designed for high-speed wrapping of soft and hard toffee products. Adjustable settings support different product dimensions while maintaining stable film handling, servo-driven feed, and reliable wrapping quality.",
-    seoTitle: "Toffee Wrapping Machine (AR-Toffee) | High-Speed Twist & Fold Wrapper Pakistan",
+      "The AR-230 Toffee Packing Machine is designed for high-speed wrapping of soft and hard toffee products. Adjustable settings support different product dimensions while maintaining stable film handling, servo-driven feed, and reliable wrapping quality.",
+    seoTitle: "Toffee Packing Machine (AR-230) | High-Speed Twist & Fold Wrapper Pakistan",
     seoDescription:
-      "High-speed AR-Toffee wrapping machine (up to 800 packs/min) by AL Raheem Engineering Lahore. Supports twist-wrap and fold-wrap for soft toffee, hard candy, and chewing gum.",
+      "High-speed AR-230 toffee packing machine (up to 800 packs/min) by AL Raheem Engineering Lahore. Supports twist-wrap and fold-wrap for soft toffee, hard candy, and chewing gum.",
     targetKeywords: [
-      "toffee wrapping machine",
+      "toffee packing machine",
+      "AR-230 toffee packing machine",
       "twist wrap machine",
       "fold wrap toffee machine",
       "candy wrapping machine Pakistan",
@@ -142,7 +144,7 @@ export const PRODUCTS: Product[] = [
     industrySlugs: ["confectionery"],
     specs: [
       { label: "Start / Stop", value: "Soft start and soft stop" },
-      { label: "Machine Type", value: "Automatic toffee wrapping machine" },
+      { label: "Machine Type", value: "Automatic toffee packing machine" },
       { label: "Size of Pack (L x W x H)", value: "Configured for soft and hard toffee sizes" },
       { label: "Machine Dimensions (L x W x H)", value: "High-speed wrapping line configuration" },
       { label: "Machine Weight", value: "Heavy-duty wrapped candy frame" },
@@ -174,14 +176,14 @@ export const PRODUCTS: Product[] = [
     ],
     faqs: [
       {
-        question: "What is the maximum operating speed of the AR-Toffee wrapping machine?",
+        question: "What is the maximum operating speed of the AR-230 toffee packing machine?",
         answer:
-          "The AR-Toffee operates at speeds of up to 800 packs per minute, making it suitable for high-volume confectionery plants.",
+          "The AR-230 operates at speeds of up to 800 packs per minute, making it suitable for high-volume confectionery plants.",
       },
       {
-        question: "Does the AR-Toffee machine handle both twist wrap and fold wrap?",
+        question: "Does the AR-230 machine handle both twist wrap and fold wrap?",
         answer:
-          "Yes. The AR-Toffee can be configured for either twist-wrap or fold-wrap formats for soft toffees, hard boiled candies, and bubble gum pieces.",
+          "Yes. The AR-230 can be configured for either twist-wrap or fold-wrap formats for soft toffees, hard boiled candies, and bubble gum pieces.",
       },
       {
         question: "How does the servo-driven film feed benefit confectionery production?",
@@ -191,24 +193,25 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
-    id: "ar-800",
-    slug: "ar-800",
-    model: "AR-800",
-    name: "Candy Packing Machine (AR-800)",
+    id: "ar-1200",
+    slug: "ar-1200",
+    model: "AR-1200",
+    name: "Candy Packing Machine (AR-1200)",
     category: "Packing Machines",
     shortDescription:
-      "Automatic candy packing with 3-side and centre sealing, up to 800 packs per minute.",
+      "Automatic candy packing machine with 3-side and centre sealing for industrial confectionery lines.",
     description:
-      "The AR-800 is a high-capacity automatic candy packing machine with 3-side and centre sealing. It uses photo-electric film registration and inverter-based speed control for consistent industrial output across candy, toffee, and confectionery lines.",
-    seoTitle: "Candy Packing Machine (AR-800) | High Speed 3-Side & Centre Seal Pakistan",
+      "The AR-1200 is a high-capacity automatic candy packing machine with 3-side and centre sealing. It uses photo-electric film registration and inverter-based speed control for consistent industrial output across candy, toffee, and confectionery lines.",
+    seoTitle: "Candy Packing Machine (AR-1200) | High Speed 3-Side & Centre Seal Pakistan",
     seoDescription:
-      "AR-800 high-speed candy packing machine (up to 800 packs/min) by AL Raheem Engineering. 3-side and centre sealing, 1400 KG frame, 440V 3-phase, manufactured in Lahore.",
+      "AR-1200 candy packing machine by AL Raheem Engineering. 3-side and centre sealing, 1400 KG frame, 440V 3-phase, manufactured in Lahore.",
     targetKeywords: [
       "candy packing machine",
+      "AR-1200 candy packing machine",
       "high speed candy packing machine Pakistan",
       "confectionery packing machine Lahore",
       "3 side seal packing machine",
-      "AR-800 packaging machine",
+      "AR-1200 packaging machine",
     ],
     industrySlugs: ["confectionery", "pharmaceutical"],
     specs: [
@@ -218,7 +221,10 @@ export const PRODUCTS: Product[] = [
       { label: "Machine Weight", value: "1,400 KG" },
       { label: "Film Reel (Outer / Core Diameter)", value: "300 / 70 mm" },
       { label: "Conveyor Length", value: "Configured according to product feeding" },
-      { label: "Machine Capacity", value: "Up to 800 packs / minute" },
+      {
+        label: "Machine Capacity",
+        value: "High-speed industrial output (Speed rating pending manual verification for AR-1200)",
+      },
       { label: "Electric Motor", value: "2 HP + 0.5 HP" },
       { label: "Machine Load", value: "15 Amp (2.8 kW)" },
       { label: "Standard Equipment", value: "Photo electric eye and inverter" },
@@ -243,41 +249,43 @@ export const PRODUCTS: Product[] = [
       { label: "Power", value: "440 VAC 3-phase, 15 Amp" },
       { label: "Total Weight", value: "1,400 KG" },
       { label: "Pack Range", value: "2g - 200g" },
+      { label: "Max Speed", value: "High-speed continuous (Pending verification)" },
     ],
     faqs: [
       {
-        question: "What is the packaging speed and sealing style of the AR-800 candy packing machine?",
+        question: "What is the sealing style and configuration of the AR-1200 candy packing machine?",
         answer:
-          "The AR-800 delivers up to 800 packs per minute with versatile 3-side and centre heat sealing for small confectionery pieces and sachets.",
+          "The AR-1200 delivers versatile 3-side and centre heat sealing for small confectionery pieces and sachets with inverter-based drive control. (Operating speed subject to factory verification for the AR-1200 series).",
       },
       {
-        question: "What are the electrical and weight specifications of the AR-800?",
+        question: "What are the electrical and weight specifications of the AR-1200?",
         answer:
-          "The AR-800 weighs 1,400 KG, is powered by a 2 HP + 0.5 HP motor arrangement, operates on 440 VAC 3-phase 50 Hz power, and draws 15 Amp (2.8 kW).",
+          "The AR-1200 features a heavy 1,400 KG industrial frame, is powered by a 2 HP + 0.5 HP motor arrangement, operates on 440 VAC 3-phase 50 Hz power, and draws 15 Amp (2.8 kW).",
       },
       {
-        question: "What pack weight range is supported by the AR-800?",
+        question: "What pack weight range is supported by the AR-1200?",
         answer:
-          "The AR-800 supports individual confectionery pack weights from 2 g to 200 g using standard food grade packaging film reels (300/70 mm).",
+          "The AR-1200 supports individual confectionery pack weights from 2 g to 200 g using standard food grade packaging film reels (300/70 mm).",
       },
     ],
     featured: true,
   },
   {
-    id: "ar-noodle",
-    slug: "ar-noodle-packing-machine",
-    model: "AR-Noodle",
-    name: "Noodle Packing Machine (AR-Noodle)",
+    id: "ar-250",
+    slug: "ar-250",
+    model: "AR-250",
+    name: "Noodle Packing Machine (AR-250)",
     category: "Packing Machines",
     shortDescription:
       "Automatic noodle and pasta pouch packing with integrated weighing support.",
     description:
-      "The AR Noodle Packing Machine combines product feeding, pouch forming, and sealing for noodle and pasta applications. It is configured for reliable dry-product handling, date coder compatibility, and practical factory operation across Pakistan.",
-    seoTitle: "Noodle Packing Machine (AR-Noodle) | Dry Pasta & Food Pouch Packaging Pakistan",
+      "The AR-250 Noodle Packing Machine combines product feeding, pouch forming, and sealing for noodle and pasta applications. It is configured for reliable dry-product handling, date coder compatibility, and practical factory operation across Pakistan.",
+    seoTitle: "Noodle Packing Machine (AR-250) | Dry Pasta & Food Pouch Packaging Pakistan",
     seoDescription:
-      "AR-Noodle automatic pouch packing machine by AL Raheem Engineering Lahore. Form-fill-seal system for instant noodles, pasta, and vermicelli with net weight dosing support.",
+      "AR-250 automatic pouch packing machine by AL Raheem Engineering Lahore. Form-fill-seal system for instant noodles, pasta, and vermicelli with net weight dosing support.",
     targetKeywords: [
       "noodle packing machine",
+      "AR-250 noodle packing machine",
       "pasta pouch packing machine",
       "instant noodle packaging machine Pakistan",
       "form fill seal noodle machine",
@@ -318,17 +326,17 @@ export const PRODUCTS: Product[] = [
     ],
     faqs: [
       {
-        question: "What types of dry food products can be packaged with the AR-Noodle machine?",
+        question: "What types of dry food products can be packaged with the AR-250 machine?",
         answer:
-          "The AR-Noodle is engineered for instant noodles, dry pasta, macaroni, vermicelli, and dry noodle cake portions.",
+          "The AR-250 is engineered for instant noodles, dry pasta, macaroni, vermicelli, and dry noodle cake portions.",
       },
       {
-        question: "Does the AR-Noodle machine support online date coding?",
+        question: "Does the AR-250 machine support online date coding?",
         answer:
           "Yes. The machine is fully compatible with standard industrial date coders, batch printers, and net weight dosing systems.",
       },
       {
-        question: "What sealing method is used on the AR-Noodle machine?",
+        question: "What sealing method is used on the AR-250 machine?",
         answer:
           "It uses a continuous form-fill-seal pouch sealing system ensuring airtight pack integrity for long shelf-life dry food products.",
       },
@@ -349,12 +357,13 @@ export const PRODUCTS: Product[] = [
       "AR-210 horizontal flow wrap machine by AL Raheem Engineering. 100 packs/min, 220V single phase, 1000 KG frame. Ideal for biscuits, chocolates, wafers, and soap bars in Lahore, Pakistan.",
     targetKeywords: [
       "flow wrap machine",
+      "AR-210 flow wrap machine",
       "horizontal flow wrap machine Pakistan",
       "biscuit packing machine",
       "soap packing machine",
       "chocolate flow wrapper Lahore",
     ],
-    industrySlugs: ["bakery", "confectionery", "soap", "food", "snacks"],
+    industrySlugs: ["bakery", "confectionery", "soap", "cosmetics", "food", "snacks"],
     specs: [
       { label: "Start / Stop", value: "Soft start and soft stop" },
       { label: "Size of Pack (L x W x H)", value: "100-300 x 25-75 x 40-80 mm" },
@@ -408,160 +417,21 @@ export const PRODUCTS: Product[] = [
     featured: true,
   },
   {
-    id: "ar-200",
-    slug: "ar-200",
-    model: "AR-200",
-    name: "Flow Wrap Machine (AR-200)",
-    category: "Flow Wrap Machines",
-    shortDescription:
-      "High-speed flow wrap machine for food and soap applications up to 200 packs per minute.",
-    description:
-      "The AR-200 Flow Wrap Machine delivers high-speed horizontal wrapping for bakery, confectionery, wafer, biscuit, and soap products. Its robust 850 KG frame and drive system are made for consistent seal quality at speed.",
-    seoTitle: "High-Speed Flow Wrap Machine (AR-200) | Up to 200 Packs/Min Pakistan",
-    seoDescription:
-      "AR-200 high-speed horizontal flow wrap machine (200 packs/min) by AL Raheem Engineering Lahore. Engineered for muffins, chocolates, wafers, biscuits, and soap bars.",
-    targetKeywords: [
-      "high speed flow wrap machine",
-      "flow wrap machine 200 packs min",
-      "bakery flow wrapper Pakistan",
-      "soap wrapping machine Lahore",
-      "horizontal packaging machine",
-    ],
-    industrySlugs: ["bakery", "confectionery", "soap", "snacks"],
-    specs: [
-      { label: "Start / Stop", value: "Soft start and soft stop" },
-      { label: "Size of Pack (L x W x H)", value: "Dynamic according to food or soap product" },
-      { label: "Machine Dimensions (L x W x H)", value: "High-speed horizontal flow wrap frame" },
-      { label: "Machine Weight", value: "850 KG" },
-      { label: "Film Reel (Outer / Core Diameter)", value: "Standard flow wrap film reel" },
-      { label: "Conveyor Length", value: "Configured according to product infeed" },
-      { label: "Machine Capacity", value: "Up to 200 packs / minute" },
-      { label: "Electric Motor", value: "High-speed flow wrap drive system" },
-      { label: "Machine Load", value: "Configured according to production speed" },
-      { label: "Standard Equipment", value: "Photo electric eye, inverter and heat sealing system" },
-      { label: "Packing Material", value: "Food grade or soap wrapping film" },
-      { label: "Voltage & Frequency", value: "As per factory electrical requirement" },
-      { label: "Packing Weight", value: "Dynamic according to product" },
-      { label: "Sealing Type", value: "Heat seal pillow pack" },
-      { label: "Usage / Application", value: "Muffin cake, chocolate, wafer, biscuit and soap" },
-    ],
-    features: [
-      "High-speed operation up to 200 packs/min",
-      "Robust 850 KG industrial frame",
-      "Consistent heat sealing across speed range",
-      "Quick adjustment for different product sizes",
-      "Proven for food and soap packaging lines",
-    ],
-    applications: ["Muffin cake", "Chocolates", "Wafers", "Biscuits", "Soap"],
-    technicalDetails: [
-      { label: "Max Speed", value: "Up to 200 packs/min" },
-      { label: "Machine Weight", value: "850 KG" },
-      { label: "Wrap Type", value: "Horizontal flow wrap" },
-      { label: "Sealing", value: "Heat seal" },
-    ],
-    faqs: [
-      {
-        question: "What is the maximum speed capability of the AR-200 flow wrap machine?",
-        answer:
-          "The AR-200 reaches continuous wrapping speeds of up to 200 packs per minute for bakery and FMCG production lines.",
-      },
-      {
-        question: "What products are best wrapped using the AR-200?",
-        answer:
-          "It is ideal for muffin cakes, chocolate bars, wafer packs, biscuits, and soap bars requiring tight, reliable heat-sealed pillow wraps.",
-      },
-      {
-        question: "How does the AR-200 ensure seal consistency at high speeds?",
-        answer:
-          "The machine uses an inverter-driven mechanism, accurate photo-electric registration, and temperature-regulated sealing jaws.",
-      },
-    ],
-  },
-  {
-    id: "ar-150",
-    slug: "ar-150",
-    model: "AR-150",
-    name: "Flow Wrap Machine (AR-150)",
-    category: "Flow Wrap Machines",
-    shortDescription:
-      "Liquid-over-wrap flow wrapper for cosmetics and personal care products up to 150 packs/min.",
-    description:
-      "The AR-150 is specialized for liquid-over-wrap packaging in personal care and cosmetic applications. It supports reliable film handling and sealing for face wash, hair color, hair remover, and bleach cream products.",
-    seoTitle: "Cosmetics Flow Wrap Machine (AR-150) | Liquid Over-Wrap Wrapper Pakistan",
-    seoDescription:
-      "AR-150 liquid-over-wrap packaging machine by AL Raheem Engineering. Up to 150 packs/min for face wash, hair color, hair remover, and cosmetic sachets in Lahore, Pakistan.",
-    targetKeywords: [
-      "cosmetic packing machine",
-      "liquid over wrap machine",
-      "sachet flow wrap machine Pakistan",
-      "face wash sachet packing machine",
-      "cosmetics packaging machine Lahore",
-    ],
-    industrySlugs: ["cosmetics"],
-    specs: [
-      { label: "Start / Stop", value: "Soft start and soft stop" },
-      { label: "Size of Pack (L x W x H)", value: "Configured for sachet and cosmetic pack formats" },
-      { label: "Machine Dimensions (L x W x H)", value: "Compact liquid-over-wrap flow wrap frame" },
-      { label: "Machine Weight", value: "800 KG" },
-      { label: "Film Reel (Outer / Core Diameter)", value: "Liquid-over-wrap compatible film reel" },
-      { label: "Conveyor Length", value: "Configured according to cosmetic product feeding" },
-      { label: "Machine Capacity", value: "Up to 150 packs / minute" },
-      { label: "Electric Motor", value: "Flow wrap drive with registration support" },
-      { label: "Machine Load", value: "Configured according to heating and sealing system" },
-      { label: "Standard Equipment", value: "Registration sensor and heat sealing system" },
-      { label: "Packing Material", value: "Liquid over wrap film" },
-      { label: "Voltage & Frequency", value: "As per factory electrical requirement" },
-      { label: "Packing Weight", value: "Dynamic according to cosmetic product" },
-      { label: "Sealing Type", value: "Flow wrap heat sealing" },
-      { label: "Usage / Application", value: "Face wash, hair color, hair remover, bleach cream and cosmetics" },
-    ],
-    features: [
-      "Liquid-over-wrap film handling",
-      "Speeds up to 150 packs/min",
-      "Configured for cosmetic and personal care products",
-      "Reliable registration for printed films",
-      "Compact industrial footprint",
-    ],
-    applications: ["Face wash sachets", "Hair color", "Hair remover", "Bleach cream", "Cosmetics"],
-    technicalDetails: [
-      { label: "Max Speed", value: "Up to 150 packs/min" },
-      { label: "Machine Weight", value: "800 KG" },
-      { label: "Film Type", value: "Liquid over wrap" },
-      { label: "Industry", value: "Cosmetics and personal care" },
-    ],
-    faqs: [
-      {
-        question: "What makes the AR-150 suitable for cosmetic and personal care packaging?",
-        answer:
-          "The AR-150 is configured with specialized liquid-over-wrap film guides and precise registration sensors for face wash, cream sachets, and hair color products.",
-      },
-      {
-        question: "What is the speed capacity of the AR-150 cosmetic wrapper?",
-        answer:
-          "The machine runs at production speeds of up to 150 packs per minute depending on sachet size and film type.",
-      },
-      {
-        question: "What film types can be processed on the AR-150?",
-        answer:
-          "It processes liquid-over-wrap and laminated barrier films designed for cosmetic sachet and personal care preservation.",
-      },
-    ],
-  },
-  {
-    id: "ar-300",
-    slug: "ar-300",
-    model: "AR-300",
-    name: "Biscuit & Rusk Packing Machine (AR-300)",
+    id: "ar-310",
+    slug: "ar-310",
+    model: "AR-310",
+    name: "Biscuit & Rusk Packing Machine (AR-310)",
     category: "Packing Machines",
     shortDescription:
       "Dedicated biscuit and rusk packing machine with consistent dry-product sealing up to 100 packs/min.",
     description:
-      "The AR-300 is purpose-built for biscuit and rusk packaging in bakery production. It handles dry bakery products with stable transfer, controlled sealing, and reliable operation for stackable and single-row pack formats in Pakistan.",
-    seoTitle: "Biscuit & Rusk Packing Machine (AR-300) | Bakery Packaging Machinery Pakistan",
+      "The AR-310 is purpose-built for biscuit and rusk packaging in bakery production. It handles dry bakery products with stable transfer, controlled sealing, and reliable operation for stackable and single-row pack formats in Pakistan.",
+    seoTitle: "Biscuit & Rusk Packing Machine (AR-310) | Bakery Packaging Machinery Pakistan",
     seoDescription:
-      "AR-300 biscuit and rusk packing machine (80-100 packs/min) by AL Raheem Engineering. Single-phase 220V, 1000 KG frame, gentle product transfer for dry bakery stacks in Lahore.",
+      "AR-310 biscuit and rusk packing machine (80-100 packs/min) by AL Raheem Engineering. Single-phase 220V, 1000 KG frame, gentle product transfer for dry bakery stacks in Lahore.",
     targetKeywords: [
       "biscuit packing machine",
+      "AR-310 packing machine",
       "rusk packing machine Pakistan",
       "bakery packaging machine",
       "cracker packing machine Lahore",
@@ -602,37 +472,38 @@ export const PRODUCTS: Product[] = [
     ],
     faqs: [
       {
-        question: "How does the AR-300 prevent biscuit and rusk breakage?",
+        question: "How does the AR-310 prevent biscuit and rusk breakage?",
         answer:
-          "The AR-300 features customized infeed guides and synchronized conveyor transfer specifically designed for delicate, brittle bakery items.",
+          "The AR-310 features customized infeed guides and synchronized conveyor transfer specifically designed for delicate, brittle bakery items.",
       },
       {
-        question: "What pack sizes are accommodated by the AR-300 biscuit packing machine?",
+        question: "What pack sizes are accommodated by the AR-310 biscuit packing machine?",
         answer:
           "It handles pack dimensions of 80-200 mm length, 10-75 mm width, and 40-80 mm height, covering single-row, stack, and slug biscuit formats.",
       },
       {
-        question: "What is the output capacity and power setup of the AR-300?",
+        question: "What is the output capacity and power setup of the AR-310?",
         answer:
-          "The AR-300 produces 80 to 100 packs per minute and runs on 220 VAC single-phase power with a 10 Amp electrical load.",
+          "The AR-310 produces 80 to 100 packs per minute and runs on 220 VAC single-phase power with a 10 Amp electrical load.",
       },
     ],
   },
   {
-    id: "ar-250",
-    slug: "ar-250",
-    model: "AR-250",
-    name: "Ice Cream Packing Machine (AR-250)",
+    id: "ar-180",
+    slug: "ar-180",
+    model: "AR-180",
+    name: "Ice Cream Packing Machine (AR-180)",
     category: "Packing Machines",
     shortDescription:
-      "Automatic ice cream packing machine for frozen-product lines up to 200 packs/min.",
+      "Automatic ice cream packing machine for frozen-product lines.",
     description:
-      "The AR-250 Ice Cream Packing Machine is engineered for frozen-product environments in Pakistan. It provides high-speed automatic operation and precise sealing for ice cream bars, cups, kulfi sticks, and novelty products.",
-    seoTitle: "Ice Cream Packing Machine (AR-250) | Frozen Product Wrapper Pakistan",
+      "The AR-180 Ice Cream Packing Machine is engineered for frozen-product environments in Pakistan. It provides automatic operation and precise sealing for ice cream bars, cups, kulfi sticks, and novelty products.",
+    seoTitle: "Ice Cream Packing Machine (AR-180) | Frozen Product Wrapper Pakistan",
     seoDescription:
-      "AR-250 automatic ice cream packing machine (up to 200 packs/min) by AL Raheem Engineering. Engineered for frozen novelty bars, cups, and kulfi packs in Lahore, Pakistan.",
+      "AR-180 automatic ice cream packing machine by AL Raheem Engineering. Engineered for frozen novelty bars, cups, and kulfi packs in Lahore, Pakistan.",
     targetKeywords: [
       "ice cream packing machine",
+      "AR-180 ice cream packing machine",
       "frozen product packaging machine Pakistan",
       "kulfi packing machine",
       "ice cream bar wrapper Lahore",
@@ -646,7 +517,10 @@ export const PRODUCTS: Product[] = [
       { label: "Machine Weight", value: "850 KG" },
       { label: "Film Reel (Outer / Core Diameter)", value: "Cold line compatible packaging film reel" },
       { label: "Conveyor Length", value: "Configured according to frozen product infeed" },
-      { label: "Machine Capacity", value: "Up to 200 packs / minute" },
+      {
+        label: "Machine Capacity",
+        value: "High-speed frozen-line output (Speed rating pending manual verification for AR-180)",
+      },
       { label: "Electric Motor", value: "Automatic ice cream packing drive system" },
       { label: "Machine Load", value: "Configured for frozen line operation" },
       { label: "Standard Equipment", value: "Registration support and precision sealing system" },
@@ -658,31 +532,30 @@ export const PRODUCTS: Product[] = [
     ],
     features: [
       "Configured for frozen product handling",
-      "High-speed operation up to 200 packs/min",
-      "Precise sealing for cold-environment products",
+      "Fast-action sealing for cold-environment products",
       "Durable product contact surfaces",
       "Suitable for bars, cups, and novelty formats",
     ],
     applications: ["Ice cream bars", "Ice cream cups", "Frozen novelty products", "Kulfi packs"],
     technicalDetails: [
-      { label: "Max Speed", value: "Up to 200 packs/min" },
+      { label: "Max Speed", value: "High-speed continuous (Pending verification)" },
       { label: "Machine Weight", value: "850 KG" },
       { label: "Environment", value: "Frozen product line" },
       { label: "Construction", value: "Industrial production surfaces" },
     ],
     faqs: [
       {
-        question: "What frozen products can be packaged with the AR-250 machine?",
+        question: "What frozen products can be packaged with the AR-180 machine?",
         answer:
-          "The AR-250 is engineered for ice cream stick bars, cups, frozen confectionery novelties, and traditional Pakistani kulfi packs.",
+          "The AR-180 is engineered for ice cream stick bars, cups, frozen confectionery novelties, and traditional Pakistani kulfi packs.",
       },
       {
-        question: "What is the speed capacity of the AR-250 in cold factory environments?",
+        question: "What is the speed capacity of the AR-180 in cold factory environments?",
         answer:
-          "It delivers high output speeds of up to 200 packs per minute with fast-action sealing to preserve frozen product integrity.",
+          "It delivers high output speeds with fast-action sealing to preserve frozen product integrity. (Operating speed subject to factory verification for the AR-180 series).",
       },
       {
-        question: "Where is the AR-250 manufactured and supported?",
+        question: "Where is the AR-180 manufactured and supported?",
         answer:
           "Manufactured at AL Raheem Engineering in Lahore, Pakistan, with customized infeed conveyors for cold-line integration and on-site support.",
       },
@@ -694,15 +567,28 @@ export const FEATURED_PRODUCTS = PRODUCTS.filter((product) => product.featured).
 export const CATEGORIES = Array.from(new Set(PRODUCTS.map((product) => product.category)));
 
 export const MACHINE_SLUGS: Record<string, string> = {
+  "ar-300": "zombie-packing-machine",
+  "ar-230": "toffee-packing-machine",
+  "ar-1200": "candy-packing-machine",
+  "ar-250": "noodle-packing-machine",
+  "ar-210": "horizontal-flow-wrap-machine",
+  "ar-310": "biscuit-rusk-packing-machine",
+  "ar-180": "ice-cream-packing-machine",
+  // Legacy product slug aliases for backward-compatible routing
   "ar-zombie-packing-machine": "zombie-packing-machine",
-  "ar-toffee-wrapping-machine": "toffee-wrapping-machine",
+  "ar-toffee-wrapping-machine": "toffee-packing-machine",
   "ar-800": "candy-packing-machine",
   "ar-noodle-packing-machine": "noodle-packing-machine",
-  "ar-210": "horizontal-flow-wrap-machine",
-  "ar-200": "flow-wrap-machine-200",
-  "ar-150": "flow-wrap-machine-150",
-  "ar-300": "biscuit-rusk-packing-machine",
-  "ar-250": "ice-cream-packing-machine",
+};
+
+const LEGACY_PRODUCT_SLUGS: Record<string, string> = {
+  "ar-zombie": "ar-300",
+  "ar-zombie-packing-machine": "ar-300",
+  "ar-toffee": "ar-230",
+  "ar-toffee-wrapping-machine": "ar-230",
+  "ar-800": "ar-1200",
+  "ar-noodle": "ar-250",
+  "ar-noodle-packing-machine": "ar-250",
 };
 
 export function getMachineSlug(productSlug: string): string {
@@ -757,11 +643,15 @@ function slugifyDocumentPart(value: string): string {
 }
 
 export function getProductByMachineSlug(machineSlug: string): Product | undefined {
+  if (machineSlug === "toffee-wrapping-machine") {
+    return PRODUCTS.find((p) => p.model === "AR-230");
+  }
   return PRODUCTS.find((product) => getMachineSlug(product.slug) === machineSlug);
 }
 
 export function getProductBySlug(slug: string): Product | undefined {
-  return PRODUCTS.find((product) => product.slug === slug);
+  const resolvedSlug = LEGACY_PRODUCT_SLUGS[slug] ?? slug;
+  return PRODUCTS.find((product) => product.slug === resolvedSlug);
 }
 
 export function getRelatedProducts(currentSlug: string, limit = 3): Product[] {
@@ -769,9 +659,9 @@ export function getRelatedProducts(currentSlug: string, limit = 3): Product[] {
   if (!current) return PRODUCTS.slice(0, limit);
 
   return PRODUCTS.filter(
-    (product) => product.slug !== currentSlug && product.category === current.category
+    (product) => product.slug !== current.slug && product.category === current.category
   )
-    .concat(PRODUCTS.filter((product) => product.slug !== currentSlug && product.category !== current.category))
+    .concat(PRODUCTS.filter((product) => product.slug !== current.slug && product.category !== current.category))
     .slice(0, limit);
 }
 

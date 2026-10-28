@@ -55,49 +55,49 @@ export const INDUSTRIES = [
     slug: "food",
     description: "Reliable packaging systems for dry foods, grains, pasta, vermicelli, and FMCG products.",
     icon: "UtensilsCrossed" as const,
-    machineModels: ["AR-Noodle", "AR-210"],
+    machineModels: ["AR-250", "AR-210", "AR-180", "AR-310", "AR-300"],
   },
   {
     name: "Confectionery",
     slug: "confectionery",
     description: "High-speed wrapping and pouch packing for toffee, candy, chocolate, and chewing gum.",
     icon: "Candy" as const,
-    machineModels: ["AR-800", "AR-Toffee", "AR-Zombie"],
+    machineModels: ["AR-1200", "AR-230", "AR-300", "AR-210"],
   },
   {
     name: "Bakery",
     slug: "bakery",
     description: "Horizontal flow wrap machines for biscuits, rusk, cakes, wafers, crackers, and baked goods.",
     icon: "Croissant" as const,
-    machineModels: ["AR-210", "AR-300", "AR-200"],
+    machineModels: ["AR-210", "AR-310"],
   },
   {
     name: "Snacks",
     slug: "snacks",
     description: "Production-ready systems for chips, nimco, extruded snacks, wafers, and portion packs.",
     icon: "Package" as const,
-    machineModels: ["AR-Zombie", "AR-210"],
+    machineModels: ["AR-300", "AR-210"],
   },
   {
     name: "Soap",
     slug: "soap",
     description: "Horizontal flow wrapping systems for laundry soap bars, toilet soaps, and personal care blocks.",
     icon: "Droplets" as const,
-    machineModels: ["AR-210", "AR-200"],
+    machineModels: ["AR-210"],
   },
   {
     name: "Cosmetics",
     slug: "cosmetics",
-    description: "Liquid-over-wrap and sachet packaging for face wash, creams, hair color, and cosmetic packs.",
+    description: "Packaging systems for personal care blocks, soap bars, and cosmetic packs.",
     icon: "Sparkles" as const,
-    machineModels: ["AR-150"],
+    machineModels: ["AR-210"],
   },
   {
     name: "Pharmaceutical",
     slug: "pharmaceutical",
     description: "Precise sealing and controlled packaging for regulated production lines and medical sachets.",
     icon: "Pill" as const,
-    machineModels: ["AR-800", "AR-Zombie"],
+    machineModels: ["AR-1200", "AR-300"],
   },
 ] as const;
 
@@ -216,7 +216,7 @@ export const SOCIAL_LINKS = [
 export const TESTIMONIALS = [
   {
     quote:
-      "The AR-800 improved our sealing consistency and gave our line the speed we needed for continuous confectionery production.",
+      "The AR-1200 improved our sealing consistency and gave our line the speed we needed for continuous confectionery production.",
     author: "Production Manager",
     company: "Confectionery Manufacturer, Lahore",
   },
@@ -261,7 +261,7 @@ export const FAQS = [
   {
     question: "What types of industrial packaging machines does AL Raheem Engineering manufacture in Pakistan?",
     answer:
-      "We manufacture flow wrap machines, high-speed candy packing machines (up to 800 packs/min), toffee wrapping machines (twist and fold wrap), multi-purpose zombie packing machines, biscuit and rusk packaging machines, noodle packing machines, ice cream wrappers, and cosmetic sachet packing systems.",
+      "We manufacture horizontal flow wrap machines (AR-210), high-speed candy packing machines (AR-1200), toffee packing machines (AR-230), multi-purpose zombie packing machines (AR-300), biscuit & rusk packing machines (AR-310), noodle packing machines (AR-250), and ice cream packing machines (AR-180).",
   },
   {
     question: "Which industries do your packaging machines serve?",

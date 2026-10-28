@@ -43,28 +43,28 @@ export default function NotFound() {
                 href="/machines/candy-packing-machine"
                 className="group flex items-center justify-between rounded-lg border border-border bg-white p-3.5 text-sm font-medium text-primary shadow-xs transition hover:border-secondary hover:text-secondary"
               >
-                <span>Candy Packing Machine (AR-800)</span>
+                <span>Candy Packing Machine (AR-1200)</span>
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
                 href="/machines/horizontal-flow-wrap-machine"
                 className="group flex items-center justify-between rounded-lg border border-border bg-white p-3.5 text-sm font-medium text-primary shadow-xs transition hover:border-secondary hover:text-secondary"
               >
-                <span>Horizontal Flow Wrapper (AR-210)</span>
+                <span>Flow Wrap Machine (AR-210)</span>
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
-                href="/machines/toffee-wrapping-machine"
+                href="/machines/toffee-packing-machine"
                 className="group flex items-center justify-between rounded-lg border border-border bg-white p-3.5 text-sm font-medium text-primary shadow-xs transition hover:border-secondary hover:text-secondary"
               >
-                <span>Toffee Wrapping Machine (AR-Toffee)</span>
+                <span>Toffee Packing Machine (AR-230)</span>
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
                 href="/machines/zombie-packing-machine"
                 className="group flex items-center justify-between rounded-lg border border-border bg-white p-3.5 text-sm font-medium text-primary shadow-xs transition hover:border-secondary hover:text-secondary"
               >
-                <span>Zombie Packing Machine (AR-Zombie)</span>
+                <span>Zombie Packing Machine (AR-300)</span>
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>

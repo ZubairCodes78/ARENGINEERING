@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -16,26 +16,28 @@ import { NAV_LINKS, whatsAppUrl } from "@/lib/constants";
 import { PRODUCTS, getMachineSlug } from "@/lib/products";
 import { cn } from "@/lib/utils";
 
+const emptySubscribe = () => () => {};
+
+function subscribeScroll(callback: () => void) {
+  window.addEventListener("scroll", callback, { passive: true });
+  return () => window.removeEventListener("scroll", callback);
+}
+
+function getScrollSnapshot() {
+  return window.scrollY > 32;
+}
+
+function getScrollServerSnapshot() {
+  return false;
+}
+
 export default function Header() {
   const pathname = usePathname();
   const isHome = pathname === "/";
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    setScrolled(window.scrollY > 32);
-  }, []);
-
-  useEffect(() => {
-    if (!mounted) return;
-    
-    const onScroll = () => setScrolled(window.scrollY > 32);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [mounted]);
+  const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);
+  const scrolled = useSyncExternalStore(subscribeScroll, getScrollSnapshot, getScrollServerSnapshot);
 
   useEffect(() => {
     if (!mounted) return;
@@ -92,7 +94,7 @@ export default function Header() {
                           AR Packaging Systems
                         </h3>
                         <p className="mt-4 text-[15px] lg:text-[17px] leading-7 text-dark-gray">
-                          Browse our complete range of industrial packaging machinery for confectionery, bakery, snacks, noodle, cosmetics, pharmaceuticals and more.
+                          Browse our complete range of industrial packaging machinery for confectionery, bakery, snacks, noodles, food, pharmaceuticals and more.
                         </p>
                         <Link
                           href="/machines"

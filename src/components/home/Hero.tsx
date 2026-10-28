@@ -15,7 +15,7 @@ const slides = [
   },
   {
     src: "/images/hero-candy-packing.png",
-    alt: "AL Raheem Engineering AR-800 High Speed Candy Packing Machine Pakistan",
+    alt: "AL Raheem Engineering AR-1200 High Speed Candy Packing Machine Pakistan",
   },
   {
     src: "/images/hero-pouch-line.png",

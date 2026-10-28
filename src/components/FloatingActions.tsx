@@ -1,7 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { Bot, Send, X } from "lucide-react";
+
+const emptySubscribe = () => () => {};
 import { motion, AnimatePresence } from "framer-motion";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import {
@@ -58,7 +60,7 @@ function getAssistantReply(message: string) {
         .map((spec) => `${spec.label}: ${spec.value}`)
         .join("; ")}. For exact configuration, share your product size, pack weight and film type.`;
     }
-    return "I can explain machine specifications. Tell me the machine name or product you want to pack, such as candy, toffee, biscuit, rusk, noodle, soap, cosmetics or ice cream.";
+    return "I can explain machine specifications. Tell me the machine name or product you want to pack, such as candy, toffee, biscuit, rusk, noodle, soap or ice cream.";
   }
 
   if (value.includes("price") || value.includes("cost") || value.includes("quote") || value.includes("quotation")) {
@@ -110,17 +112,13 @@ export default function FloatingActions() {
   const [input, setInput] = useState("");
   const [visible, setVisible] = useState(false);
   const [scrollingDown, setScrollingDown] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       role: "assistant",
       text: "Welcome. I am AR Assistant. Ask about machines, payment policy, company details, contact, WhatsApp, or machine recommendations.",
     },
   ]);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   useEffect(() => {
     if (!mounted) return;

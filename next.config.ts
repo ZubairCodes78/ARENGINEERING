@@ -5,6 +5,41 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/machines/flow-wrap-machine-200",
+        destination: "/machines",
+        permanent: true,
+      },
+      {
+        source: "/machines/flow-wrap-machine-150",
+        destination: "/machines",
+        permanent: true,
+      },
+      {
+        source: "/machines/toffee-wrapping-machine",
+        destination: "/machines/toffee-packing-machine",
+        permanent: true,
+      },
+      {
+        source: "/machines/ar-200",
+        destination: "/machines",
+        permanent: true,
+      },
+      {
+        source: "/machines/ar-150",
+        destination: "/machines",
+        permanent: true,
+      },
+      {
+        source: "/products/ar-200",
+        destination: "/machines",
+        permanent: true,
+      },
+      {
+        source: "/products/ar-150",
+        destination: "/machines",
+        permanent: true,
+      },
+      {
         source: "/products",
         destination: "/machines",
         permanent: true,

@@ -8,7 +8,7 @@ import { CATEGORIES, PRODUCTS, getMachineSlug } from "@/lib/products";
 export const metadata: Metadata = {
   title: "Packaging Machinery Pakistan | Industrial Packaging Machine Manufacturer",
   description:
-    "Explore the complete industrial packaging machinery catalogue from AL Raheem Engineering Pakistan. Featuring high-speed candy packing, toffee wrapping, horizontal flow wrap, biscuit, noodle, and soap packaging machines.",
+    "Explore the complete industrial packaging machinery catalogue from AL Raheem Engineering Pakistan. Featuring Zombie packing, toffee packing, candy packing, noodle packing, horizontal flow wrap, biscuit and rusk, and ice cream packing machines.",
   keywords: [
     "Packaging Machine Manufacturer Pakistan",
     "Packaging Machinery Pakistan",
@@ -18,10 +18,11 @@ export const metadata: Metadata = {
     "Packaging Machinery Lahore",
     "Flow Wrap Machine Pakistan",
     "Candy Packing Machine Pakistan",
-    "Toffee Wrapping Machine Pakistan",
+    "Toffee Packing Machine Pakistan",
+    "Zombie Packing Machine Pakistan",
     "Biscuit Packing Machine Pakistan",
     "Noodle Packing Machine Pakistan",
-    "Soap Packing Machine Pakistan",
+    "Ice Cream Packing Machine Pakistan",
   ],
   alternates: {
     canonical: "/machines",
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Packaging Machinery Pakistan | Industrial Packaging Machine Manufacturer",
     description:
-      "Explore the complete industrial packaging machinery catalogue from AL Raheem Engineering Pakistan. High-speed flow wrap, candy packing, toffee wrapping, biscuit, and noodle machines.",
+      "Explore the complete industrial packaging machinery catalogue from AL Raheem Engineering Pakistan. High-speed flow wrap, candy packing, toffee packing, zombie packing, biscuit, noodle, and ice cream packing machines.",
     url: `${COMPANY.websiteUrl}/machines`,
     type: "website",
     siteName: COMPANY.name,

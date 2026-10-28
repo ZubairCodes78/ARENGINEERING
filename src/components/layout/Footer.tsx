@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import Container from "@/components/ui/Container";
 import OfficialLogo from "@/components/OfficialLogo";
 import SocialIcon from "@/components/SocialIcon";
@@ -7,12 +7,13 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { COMPANY, LEGAL_LINKS, SOCIAL_LINKS, whatsAppUrl } from "@/lib/constants";
 
 const machineLinks = [
-  { label: "Candy Packing Machine (AR-800)", href: "/machines/candy-packing-machine" },
-  { label: "Toffee Wrapping Machine (AR-Toffee)", href: "/machines/toffee-wrapping-machine" },
-  { label: "Horizontal Flow Wrapper (AR-210)", href: "/machines/horizontal-flow-wrap-machine" },
-  { label: "Zombie Packing Machine (AR-Zombie)", href: "/machines/zombie-packing-machine" },
-  { label: "Biscuit & Rusk Packing Machine (AR-300)", href: "/machines/biscuit-rusk-packing-machine" },
-  { label: "Noodle Packing Machine (AR-Noodle)", href: "/machines/noodle-packing-machine" },
+  { label: "Zombie Packing Machine (AR-300)", href: "/machines/zombie-packing-machine" },
+  { label: "Toffee Packing Machine (AR-230)", href: "/machines/toffee-packing-machine" },
+  { label: "Candy Packing Machine (AR-1200)", href: "/machines/candy-packing-machine" },
+  { label: "Noodle Packing Machine (AR-250)", href: "/machines/noodle-packing-machine" },
+  { label: "Flow Wrap Machine (AR-210)", href: "/machines/horizontal-flow-wrap-machine" },
+  { label: "Biscuit & Rusk Packing Machine (AR-310)", href: "/machines/biscuit-rusk-packing-machine" },
+  { label: "Ice Cream Packing Machine (AR-180)", href: "/machines/ice-cream-packing-machine" },
   { label: "View Complete Machine Catalogue →", href: "/machines" },
 ];
 
@@ -44,7 +45,7 @@ export default function Footer() {
             </div>
             <p className="mt-6 max-w-sm text-sm leading-7 text-white/62">
               Industrial packaging machine manufacturer in Lahore, Pakistan. Engineering reliable
-              systems for food, confectionery, bakery, snacks, soap, cosmetics, and pharmaceutical
+              systems for food, confectionery, bakery, snacks, soap, and pharmaceutical
               production lines.
             </p>
             <div className="mt-6 space-y-2 text-xs text-white/50">

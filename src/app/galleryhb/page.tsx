@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Calendar, Image as ImageIcon } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 import Container from "@/components/ui/Container";
 import FadeUp from "@/components/ui/FadeUp";
 import Button from "@/components/ui/Button";

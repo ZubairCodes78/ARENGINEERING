@@ -75,7 +75,7 @@ export default function ContactForm() {
             value={form.product}
             onChange={(event) => setForm({ ...form, product: event.target.value })}
             className="w-full rounded-md border border-border bg-white px-4 py-3 text-sm text-dark-gray outline-none transition focus:border-secondary focus:ring-2 focus:ring-secondary/15"
-            placeholder="Example: AR-800 candy packing machine"
+            placeholder="Example: AR-1200 candy packing machine"
           />
         </div>
 

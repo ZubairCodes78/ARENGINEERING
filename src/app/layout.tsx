@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | AL RAHEEM ENGINEERING",
   },
   description:
-    "AL Raheem Engineering is a premier packaging machine manufacturer in Pakistan. We engineer high-speed flow wrap, candy packing, toffee wrapping, biscuit, noodle, and soap packaging machinery in Lahore.",
+    "AL Raheem Engineering is a premier packaging machine manufacturer in Pakistan. We engineer high-speed flow wrap, candy packing, toffee packing, zombie packing, biscuit, noodle, and ice cream packaging machinery in Lahore.",
   keywords: [
     "Packaging Machine Manufacturer Pakistan",
     "Packaging Machinery Pakistan",
@@ -36,11 +36,12 @@ export const metadata: Metadata = {
     "Packaging Machinery Lahore",
     "Flow Wrap Machine Pakistan",
     "Candy Packing Machine Pakistan",
-    "Toffee Wrapping Machine Pakistan",
+    "Toffee Packing Machine Pakistan",
+    "Zombie Packing Machine Pakistan",
     "Biscuit Packing Machine Pakistan",
     "Noodle Packing Machine Pakistan",
+    "Ice Cream Packing Machine Pakistan",
     "Soap Packing Machine Pakistan",
-    "Cosmetic Packing Machine Pakistan",
     "AL Raheem Engineering",
     "AR Engineering Pakistan",
   ],

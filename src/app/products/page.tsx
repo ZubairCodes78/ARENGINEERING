@@ -6,7 +6,7 @@ import { CATEGORIES, PRODUCTS } from "@/lib/products";
 export const metadata: Metadata = {
   title: "Machines | AL RAHEEM ENGINEERING",
   description:
-    "View the complete AR machine catalog from AL Raheem Engineering, including candy packing, toffee wrapping, flow wrap, biscuit, noodle, and ice cream packing machines.",
+    "View the complete AR machine catalog from AL Raheem Engineering, including zombie packing, toffee packing, candy packing, noodle packing, flow wrap, biscuit and rusk, and ice cream packing machines.",
 };
 
 export default function ProductsPage() {

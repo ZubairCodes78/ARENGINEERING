@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { COMPANY, EVENTS, LEGAL_LINKS, NAV_LINKS } from "@/lib/constants";
+import { COMPANY, EVENTS, LEGAL_LINKS } from "@/lib/constants";
 import { PRODUCTS, getMachineSlug } from "@/lib/products";
 
 export default function sitemap(): MetadataRoute.Sitemap {
